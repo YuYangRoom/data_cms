@@ -1,0 +1,267 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>新增推送规则详情页</legend>
+        <div class="control-group">
+            <label class="control-label"> 失效该条规则</label>
+            <div class="controls">
+                {{#ifCond isValid true}}
+                <input type="checkbox" id="isValid"  checked >
+                {{else}}
+                <input type="checkbox" id="isValid"   >
+                {{/ifCond}}
+                 <!--   {{#ifCond isValid "true"}}
+                    <input type="checkbox" id="isValid" checked>
+                    {{/ifCond}}}
+                    {{#ifCond isValid "false"}}
+                    <input type="checkbox" id="isValid" checked>
+                    {{/ifCond}}}-->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="cityname" readonly placeholder="必填" value="{{city.cityname}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city._id}}'>{{city.cityname}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-property-type">规则类型</label>
+            <div class="controls">
+                <select id="recommendRule-property-type">时间规则 | 地理位置规则
+                    <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>时间规则</option>
+                    <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>地理位置规则</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-title"> 规则名称</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-title" placeholder="必填" value="{{title}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-desc"> 规则描述</label>
+            <div class="controls">
+                <textarea id="recommendRule-desc" style="width: 300px">{{desc}}</textarea>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-longitude"> 推送中心经度</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-longitude" placeholder="必填" value="{{longitude}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-latitude"> 推送中心纬度</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-latitude" placeholder="必填" value="{{latitude}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-range"> 推送范围</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-range" placeholder="必填" value="{{range}}">
+            </div>
+        </div>
+
+        <div class="control-group comments-group">
+            <label class="control-label">推送内容</label>
+            <div class="controls">
+                <input type="button"  value="新增推荐"   id="addRecommendRule"><font color="red">景点:0、餐厅POI:1、购物点POI:2、购物区POI:3、活动:4、PGC:5、新闻:6</font>
+            </div>
+        </div>
+        <label class="control-label">推送内容</label>
+        {{#if recom_content}}
+        {{#each recom_content}}
+        <div class="control-group recomments-group">
+            <div class="controls">
+                type:<input class="input-xlarge focused recomments" name="type" style="width:2%" type="text" value="{{type}}" >
+                id:<input class="input-xlarge focused recomments" name="id" style="width:15%"   type="text" value="{{id}}" >
+                title:<input class="input-xlarge focused recomments" name="title" style="width:12%"   type="text"  readonly value="{{title}}" >
+                recom_title:<input class="input-xlarge focused recomments" name="recom_title" style="width:12%"   type="text"  value="{{recom_title}}" >
+                recom_desc:<textarea class="input-xlarge focused recomments" name="recom_desc" style="width: 300px">{{recom_desc}}</textarea>
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        <hr style="height:1px;border:none;border-top:1px solid #555555;">
+        <font color="#ff212d">以下只有时间规则填写</font>
+
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-startDate">日期（开始）</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-startDate" placeholder="点击此处添加时间" value="{{startDate}}"  onfocus="setday(this)"  readonly="readonly" >
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommendRule-endDate">日期（结束）</label>
+            <div class="controls">
+                <input type="text" id="recommendRule-endDate" placeholder="点击此处添加时间" value="{{endDate}}"  onfocus="setday(this)"  readonly="readonly">
+            </div>
+        </div>
+            <label class="control-label" > 星期</label>
+        <div class="control-group">
+            <div class="controls">
+                {{#ifCond one true}}
+                <label>星期一<input type="checkbox" id="one" checked> </label>
+                {{else}}
+                <label>星期一<input type="checkbox" id="one"> </label>
+                {{/ifCond}}
+                {{#ifCond two true}}
+                <label>星期二<input type="checkbox" id="two" checked> </label>
+                {{else}}
+                <label>星期二<input type="checkbox" id="two"> </label>
+                {{/ifCond}}
+                {{#ifCond three true}}
+                <label>星期三<input type="checkbox" id="three" checked> </label>
+                {{else}}
+                <label>星期三<input type="checkbox" id="three"> </label>
+                {{/ifCond}}
+                {{#ifCond four true}}
+                <label>星期四<input type="checkbox" id="four" checked> </label>
+                {{else}}
+                <label>星期四<input type="checkbox" id="four"> </label>
+                {{/ifCond}}
+                {{#ifCond two true}}
+                <label>星期五<input type="checkbox" id="five" checked> </label>
+                {{else}}
+                <label>星期五<input type="checkbox" id="five"> </label>
+                {{/ifCond}}
+                {{#ifCond six true}}
+                <label>星期六<input type="checkbox" id="six" checked> </label>
+                {{else}}
+                <label>星期六<input type="checkbox" id="six"> </label>
+                {{/ifCond}}
+                {{#ifCond seven true}}
+                <label>星期天<input type="checkbox" id="seven" checked> </label>
+                {{else}}
+                <label>星期天<input type="checkbox" id="seven"> </label>
+                {{/ifCond}}
+                {{#ifCond eight true}}
+                <label>全周<input type="checkbox" id="eight" checked> </label>
+                {{else}}
+                <label>全周<input type="checkbox" id="eight"> </label>
+                {{/ifCond}}
+            </div>
+        </div>
+
+   <!--     <div class="control-group comments-groupTime">
+            <label class="control-label">时间段分片</label>
+            <div class="controls">
+                <input type="button"  value="新增时间段"   id="addRecomment_Time">
+            </div>
+        </div>
+        <label class="control-label">时间段信息（原）</label>
+        {{#if time_rules}}
+        {{#each time_rules}}
+        <div class="control-group recomments-groupTime">
+            <div class="controls">
+                &lt;!&ndash;<input class="input-xlarge focused recomments" name="start_time" style="width:12%" type="text" value="{{start_time}}" >&ndash;&gt;
+                开始时间:
+                <select  class="input-xlarge focused recomments" name="start_time"  style="width:6%" >
+                    <option value="00" {{#ifCond start_time '00'}} selected {{/ifCond}}>00</option>
+                    <option value="01" {{#ifCond start_time '01'}} selected {{/ifCond}}>01</option>
+                    <option value="02" {{#ifCond start_time '02'}} selected {{/ifCond}}>02</option>
+                    <option value="03" {{#ifCond start_time '03'}} selected {{/ifCond}}>03</option>
+                    <option value="04" {{#ifCond start_time '04'}} selected {{/ifCond}}>04</option>
+                    <option value="05" {{#ifCond start_time '05'}} selected {{/ifCond}}>05</option>
+                    <option value="06" {{#ifCond start_time '06'}} selected {{/ifCond}}>06</option>
+                    <option value="07" {{#ifCond start_time '07'}} selected {{/ifCond}}>07</option>
+                    <option value="08" {{#ifCond start_time '08'}} selected {{/ifCond}}>08</option>
+                    <option value="09" {{#ifCond start_time '09'}} selected {{/ifCond}}>09</option>
+                    <option value="10" {{#ifCond start_time '10'}} selected {{/ifCond}}>10</option>
+                    <option value="11" {{#ifCond start_time '11'}} selected {{/ifCond}}>11</option>
+                    <option value="12" {{#ifCond start_time '12'}} selected {{/ifCond}}>12</option>
+                    <option value="13" {{#ifCond start_time '13'}} selected {{/ifCond}}>13</option>
+                    <option value="14" {{#ifCond start_time '14'}} selected {{/ifCond}}>14</option>
+                    <option value="15" {{#ifCond start_time '15'}} selected {{/ifCond}}>15</option>
+                    <option value="16" {{#ifCond start_time '16'}} selected {{/ifCond}}>16</option>
+                    <option value="17" {{#ifCond start_time '17'}} selected {{/ifCond}}>17</option>
+                    <option value="18" {{#ifCond start_time '18'}} selected {{/ifCond}}>18</option>
+                    <option value="19" {{#ifCond start_time '19'}} selected {{/ifCond}}>19</option>
+                    <option value="20" {{#ifCond start_time '20'}} selected {{/ifCond}}>20</option>
+                    <option value="21" {{#ifCond start_time '21'}} selected {{/ifCond}}>21</option>
+                    <option value="22" {{#ifCond start_time '22'}} selected {{/ifCond}}>22</option>
+                    <option value="23" {{#ifCond start_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+                结束时间:&lt;!&ndash;<input class="input-xlarge focused recomments" name="end_time" style="width:20%" type="text" value="{{end_time}}" >&ndash;&gt;
+                <select  class="input-xlarge focused recomments" name="end_time" style="width:6%" >
+                    <option value="00" {{#ifCond end_time '00'}} selected {{/ifCond}}>00</option>
+                    <option value="01" {{#ifCond end_time '01'}} selected {{/ifCond}}>01</option>
+                    <option value="02" {{#ifCond end_time '02'}} selected {{/ifCond}}>02</option>
+                    <option value="03" {{#ifCond end_time '03'}} selected {{/ifCond}}>03</option>
+                    <option value="04" {{#ifCond end_time '04'}} selected {{/ifCond}}>04</option>
+                    <option value="05" {{#ifCond end_time '05'}} selected {{/ifCond}}>05</option>
+                    <option value="06" {{#ifCond end_time '06'}} selected {{/ifCond}}>06</option>
+                    <option value="07" {{#ifCond end_time '07'}} selected {{/ifCond}}>07</option>
+                    <option value="08" {{#ifCond end_time '08'}} selected {{/ifCond}}>08</option>
+                    <option value="09" {{#ifCond end_time '09'}} selected {{/ifCond}}>09</option>
+                    <option value="10" {{#ifCond end_time '10'}} selected {{/ifCond}}>10</option>
+                    <option value="11" {{#ifCond end_time '11'}} selected {{/ifCond}}>11</option>
+                    <option value="12" {{#ifCond end_time '12'}} selected {{/ifCond}}>12</option>
+                    <option value="13" {{#ifCond end_time '13'}} selected {{/ifCond}}>13</option>
+                    <option value="14" {{#ifCond end_time '14'}} selected {{/ifCond}}>14</option>
+                    <option value="15" {{#ifCond end_time '15'}} selected {{/ifCond}}>15</option>
+                    <option value="16" {{#ifCond end_time '16'}} selected {{/ifCond}}>16</option>
+                    <option value="17" {{#ifCond end_time '17'}} selected {{/ifCond}}>17</option>
+                    <option value="18" {{#ifCond end_time '18'}} selected {{/ifCond}}>18</option>
+                    <option value="19" {{#ifCond end_time '19'}} selected {{/ifCond}}>19</option>
+                    <option value="20" {{#ifCond end_time '20'}} selected {{/ifCond}}>20</option>
+                    <option value="21" {{#ifCond end_time '21'}} selected {{/ifCond}}>21</option>
+                    <option value="22" {{#ifCond end_time '22'}} selected {{/ifCond}}>22</option>
+                    <option value="23" {{#ifCond end_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+                名称:<input class="input-xlarge focused recomments" name="time_title" style="width:20%"  type="text" value="{{title}}" >
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+-->
+        <div class="control-group">
+            <label class="control-label" for="addTimetagValue">时间关联</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addTimetagValue" id="addTimetagValue" type="text" value=""
+                       data-value="" placeholder="此处按空格键" data-value1="" data-value2=""> <input type="button" value="添加" id="addTimetag">
+                <font color="#8b0000">（此处关联</font>时间分段界面）
+            </div>
+            <div class="controls time_rules">
+                <ul id="time_rules-list">
+                    {{#if time_rules}}
+                    {{#each time_rules}}
+                    <li><input class="input-xlarge focused timetags" readonly style="width:100px" name="timetags" placeholder="无(先删除）"
+                               type="text" value="{{title}}" data-value="{{start_time}}"data-value2="{{end_time}}"> <input type="button" value="删除"  class="del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+
+
+
+
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

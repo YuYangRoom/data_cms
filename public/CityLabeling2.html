@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Labeling</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.cityTable, .cityTable th, .cityTable td{
+border:black 1px solid;
+border-collapse:collapse;
+}
+.labelType, .label, .label input, .selector{
+float:left;
+}
+.labelType{
+font-weight:800;
+}
+.cityId, .labelId{
+display:none;
+}
+</style>
+</head>
+<body>
+<div id="mainPanel">
+  <div class="label1">
+    <label class="labelType">一级标签：</label>
+  </div>
+  <div style="clear:both"></div>
+  
+  <div class="label2">
+    <label class="labelType">二级标签：</label>
+  </div>
+  <button class="btnAddLabel2">添加标签</button>
+  <div style="clear:both"></div>
+  
+  <table class="cityTable">
+    <thead>
+      <tr>
+        <th><input class="allChecked" type="checkbox"/>
+          全选</th>
+        <th>城市名</th>
+        <th>City Name</th>
+        <th>主标签</th>
+        <th>二级标签</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript" src="javascripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="javascripts/underscore-min.js"></script>
+<script type="text/template" id="label1Template">
+<div class="label">
+  <div class="labelName selector"><%= labelName %></div>
+</div>
+</script>
+<script type="text/template" id="label2Template">
+<div class="label">
+   <input type="checkBox" name="level2" value="<%= labelId %>"/>
+   <div class="labelName selector"><%= labelName %></div>
+</div>
+</script>
+<script type="text/template" id="cityTemplate">
+      <tr class="cityItem">
+        <td><input class="cityCheck" type="checkbox" value="<%= cityId %>"/></td>
+        <td><%= cityName %></td>
+        <td><%= cityNameEn %></td>
+        <td><div class="masterLabel"><div class="labelName"><%= masterLabel %></div><div class="labelId"><%= masterLabelId %></div></div></td>
+        <td><%= subLabels %></td>
+      </tr>
+</script>
+<script type="text/javascript">
+function getLabelFromId(labelId){
+    if(labelId===undefined||labelId==='') return false;
+    var dd = $.ajax({ url: "/getLabelByID/"+labelId, async: false }).responseText;
+    if(dd===null||dd==='') return false;
+    else{
+        return  $.parseJSON(dd)['label'];
+    }
+}
+function getLabelsFromIds(labelIds){
+	var labelStr = "";
+	labelIds.each( function(){
+						var label = getLabelFromId(this);
+						labelStr += "<div class=\"labelName\">" + label + ",</div><div class=\"labelId\">"+this+"</div>";
+					});
+	return labelStr;
+}
+
+function init(){
+	$(".allChecked").click( function(){
+								if($(this).attr("checked") == "checked")
+									$(".cityCheck").attr("checked", true);
+								else
+									$(".cityCheck").attr("checked", false);
+							});
+}
+
+function addLabel2ToCities(labelIds, cityList){
+	//alert("二级标签id： "+labelIds+"\n"+"城市id： "+cityList);
+	$.ajax({
+			url: "/addSubLabelToCities",
+			type: "POST",
+			data: {
+				'labelIds':labelIds,
+				'cityList':cityList
+			},
+			success: function(data){
+						console.log(data);
+					}
+			});
+}
+
+function initLabel1(labelId, labelName){
+	var variables = {
+					"labelId" : labelId,
+					"labelName" : labelName
+					};
+	var html = _.template( $("#label1Template").html(), variables );
+	$(".label1").append(html);
+}
+
+function initLabel2(masterLabelId){
+	$.ajax({
+			url: "/getLabelByID/"+masterLabelId,
+			type: "GET",
+			success: function(data){
+						var subLabelList = $(data["subLabel"]);
+						subLabelList.each( function(){
+												var labelId = this['_id'];
+												var labelName = this['label'];
+												var variables = {
+													"labelId" : labelId,
+													"labelName" : labelName
+												};
+												var html = _.template( $("#label2Template").html(), variables );
+												$(".label2").append(html);
+											});
+					}
+			});
+}
+
+(function($) {
+	init();
+	var href = decodeURI(location.href);
+	var param = href.substring(href.indexOf("#")+1).split("#");
+	var labelId = param[0];
+	var labelName = param[1];
+	initLabel1(labelId, labelName);
+	initLabel2(labelId);
+	
+	$.ajax({
+                url:'/getCityByLabelID/'+labelId,
+                type:'GET',
+                success:function (data) {
+					var $cityList = $(data);
+					$($cityList).each( function(){
+										var cityId = this['_id'];
+										var cityName = this['cityname'];
+										var cityNameEn = this['cityname_en'];
+										var masterLabelId = this['masterLabel'];
+										var subLabelIds = $(this['subLabel']);
+										var variables = { 
+											"cityId" : cityId,
+											"cityName" : cityName,
+											"cityNameEn" : cityNameEn,
+											"masterLabelId" : masterLabelId,
+											"masterLabel" : getLabelFromId(masterLabelId),
+											"subLabels" : getLabelsFromIds(subLabelIds)
+										 };
+										var html = _.template( $("#cityTemplate").html(), variables );
+										$(".cityTable tbody").append(html);
+									});
+                  }
+            });
+			
+	$(".btnAddLabel2").click( function(){
+								var checkedBoxs =$('input:checkBox[name="level2"]:checked');
+								if(checkedBoxs.length == 0){
+									alert("请选择一个标签！");
+									return;
+								}
+								var labelIds = new Array();
+								checkedBoxs.each( function(){
+												labelIds.push($(this).val());
+											});
+											
+								checkedBoxs = $('input:checkBox[class="cityCheck"]:checked');
+								if(checkedBoxs.length == 0){
+									alert("请选择需要打标签的城市");
+									return;
+								}
+								var checkedCity = new Array();
+								checkedBoxs.each( function(){
+														checkedCity.push($(this).val());														
+													});
+								
+								addLabel2ToCities(labelIds, checkedCity);								
+							});
+})(jQuery);
+</script>
+</body>
+</html>

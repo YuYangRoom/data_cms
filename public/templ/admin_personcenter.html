@@ -1,0 +1,298 @@
+<div class="container">
+	<div class="content">
+		<div class="row-fluid">
+			<div class="widget span8">
+				<div class="widget-header">
+					<i class="icomoon-th-list"></i>
+					<h5>编辑任务</h5>
+					<div class="widget-buttons">
+
+						<a data-toggle="modal"  title="增加任务"><i class="icomoon-plus"></i></a>
+						<div class="modal hide fade in" id="myModal" >
+						  <div class="modal-header">
+						    <a class="close delete" data-dismiss="modal">×</a>
+						    <h3>新建任务</h3>
+						  </div>
+						  <div class="modal-body">
+						  	<form action="" class="form-horizontal">
+						  		<fieldset>
+						  			<div class="control-group">
+								  		<label for="" class="control-label">编辑者</label>
+								  		<div class="controls">
+											<select id="editor_select"></select>
+								  		</div>
+								  	</div>
+							  		<div class="control-group">
+								  		<label for="" class="control-label">城市</label>
+								  		<div class="controls">
+											<select id="city_select"></select>
+								  		</div>
+								  	</div>
+								  	<div class="control-group">
+								  		<label for="total" class="control-label">景点</label>
+								  		<div class="controls">
+								  			<input type="text" id="attraction_num" style="width:25px" value="10">&nbsp;&nbsp;餐馆
+								  			<input type="text" id="restaurant_num" style="width:25px" value="10">&nbsp;&nbsp;购物
+								  			<input type="text" id="shopping_num" style="width:25px" value="10">&nbsp;&nbsp;娱乐
+								  			<input type="text" id="entertainment_num" style="width:25px" value="0">
+								  		</div>
+								  	</div>
+								  	<div class="control-group">
+								  		<label for="total" class="control-label">总量</label>
+								  		<div class="controls">
+								  			<input type="text" id="total" readonly value="30">[单位：条]
+								  		</div>
+								  	</div>
+								  	<div class="control-group">
+								  		<label for="" class="control-label">时长</label>
+								  		<div class="controls">
+								  			<input type="text" id="days" value="10">[单位：天]
+								  		</div>
+								  	</div>
+								  	<div class="control-group">
+								  		<label for="" class="control-label">任务名称</label>
+								  		<div class="controls">
+								  			<input type="text" id="taskname" placeholder="纽约30条数据任务" value="">
+								  		</div>
+								  	</div>
+								  
+								  	<div class="control-group">
+								  		<label for="" class="control-label">详情</label>
+								  		<div class="controls">
+								  			<textarea class="input-xlarge" placeholder="例如：10个景点，10个餐馆，10个商店"  id="desc" rows="3"></textarea>
+								  		</div>
+								  	</div>
+						  		</fieldset>
+						  	</form>
+						  </div>
+						  <div class="modal-footer">
+						    <a href="#" class="btn delete" data-dismiss="modal">关闭</a>
+						    <a href="#" class="btn btn-primary" id="sendTask">发送任务</a>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+				<div class="widget-tasks-assigned">
+					<ul id="allTask">
+						<!-- <li>
+							<div class="content">
+								<ul class="taskdetail">
+									<li>
+										<h3>chick</h3>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<h5>纽约</h5>
+											</dt>
+											<dd>
+												<p>编辑10个城市景点和20个生活类信息。</p>
+											</dd>
+											<dd>
+												<em>开始于：2014-3-17</em>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<h4>13天</h4>
+										<p>离任务结束</p>
+									</li>
+									<li><h4>35%</h4><p>当前完成</p></li>
+									<li>
+										<button data-toggle="modal" class="btn btn-primary">查看</button>
+										<button class="btn btn-warning" href="#">删除</button>
+										<button class="btn btn-info sendmsg">发信息</button>
+										<button class="btn btn-primary checkeditor">审核</button>
+									</li>
+								</ul>
+							</div>
+							<div class="progress">
+		                      <div style="width: 35%;" class="bar"></div>
+		                    </div>
+						</li> -->
+					</ul>
+				</div>
+				<ul class="pager">
+				  <li>当前页：<span id="curr-page">1</span></li>
+				  <li>总页数：<span id="total-page">2</span></li>
+				  <li>总记录数：<span id="total-count">14</span></li>
+				  <li><a href="#" id="all-task-pre">上一页</a></li>
+				  <li><a href="#" id="all-task-next">下一页</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="row-fluid">
+			<div class="widget span8">
+				<div class="widget-header">
+					<div class="widget-header">
+						<i class="icomoon-users"></i>
+						<h5>任务审核</h5>
+						<div class="widget-buttons">
+
+							<a data-toggle="modal"  title="增加编辑"><i class="icomoon-plus"></i></a>
+							<div class="modal hide fade in" id="addeditor">
+							  <div class="modal-header">
+							    <a class="close delete" data-dismiss="modal">×</a>
+							    <h3>新建任务</h3>
+							  </div>
+							  <div class="modal-body">
+							  	<form action="" class="form-horizontal">
+							  		<fieldset>
+							  			<div class="control-group">
+									  		<label for="" class="control-label">编辑</label>
+									  		<div class="controls">
+									  			<input type="text">
+									  		</div>
+									  	</div>
+									  	<div class="control-group">
+									  		<label for="" class="control-label">开始时间</label>
+									  		<div class="controls">
+									  		</div>
+									  	</div>
+							  		</fieldset>
+							  	</form>
+							  </div>
+							  <div class="modal-footer">
+							    <a href="#" class="btn delete" data-dismiss="modal">关闭</a>
+							    <a href="#" class="btn btn-primary">发送任务</a>
+							  </div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget-body usertable">
+					<table class="table table-striped table-bordered table-condensed">
+						<thead>
+							<tr>
+								<th>编辑</th>
+								<th>城市</th>
+								<th>任务</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>chick</td>
+								<td>newyork</td>
+								<td>完成</td>
+								<td><button class="btn btn-primary checkeditor">审核</button></td>
+							</tr>
+							<tr>
+								<td>chick</td>
+								<td>newyork</td>
+								<td>完成</td>
+								<td><button class="btn btn-primary checkeditor">审核</button></td>
+							</tr>
+							<tr>
+								<td>chick</td>
+								<td>newyork</td>
+								<td>完成</td>
+								<td><button class="btn btn-primary checkeditor">审核</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<ul class="pager">
+				    <li><a href="#">上一页</a></li>
+				    <li><a href="#">下一页</a></li>
+				</ul>
+			</div>
+		</div> -->
+		<!-- editor task detail =================================================================-->
+		<div class="modal hide fade in" id="taskdetail">
+			  <div class="modal-header">
+			    <a class="close delete" data-dismiss="modal">×</a>
+			    <h3>详细信息</h3>
+			  </div>
+			  <div class="modal-body" id="taskdetail-statistic">
+			  </div>
+		</div>  	
+		<div class="modal hide fade in" id="checkdetail">
+			  <div class="modal-header">
+			    <a class="close delete" data-dismiss="modal">×</a>
+
+			    <h3>审核信息</h3>
+			  </div>
+			  <div class="modal-body">
+			  	<form action="" class="form-horizontal">
+			  		<fieldset>
+			  			<table class="table table-striped table-bordered table-condensed">
+			  				<thead>
+			  					<tr>
+			  						<th>修改时间</th>
+			  						<th>城市</th>
+			  						<th>类型</th>
+			  						<th>条目名称</th>
+			  						<th>操作</th>
+			  						<th>是否通过</th>
+			  					</tr>
+			  				</thead>
+			  				<tbody id="checkdetail-list">
+			  					<!-- <tr>
+			  						<td>2014-3-20</td>
+			  						<td>景点</td>
+			  						<td>巴黎</td>
+			  						<td>巴黎铁塔</td>
+			  						<td>
+			  							<a href="" class="btn viewone">查看</a>
+			  						</td>
+			  						<td>
+			  							通过
+			  							<input type="checkbox">
+			  						</td>
+			  					</tr> -->
+			  				</tbody>
+			  			</table>
+			  		</fieldset>
+			  	</form>
+			  </div>
+			  <div class="modal-footer">
+			    <a href="#" class="btn delete" data-dismiss="modal">关闭</a>
+			    <a href="#" class="btn btn-primary" id="sendApproval">发送审核信息</a>
+			  </div>
+		</div>
+
+
+		<div class="modal hide fade in" id="sendmsg">
+			<div class="modal-header">
+			    <a class="close delete" data-dismiss="modal">×</a>
+			    <h3>信息内容</h3>
+			</div>
+			<div class="modal-body">
+			  	<form action="" class="form-horizontal">
+			  		<textarea id="taskquestion-content" cols="30" rows="10" placeholder="例如：请重新修改审核没有通过的信息"></textarea>
+			  	</form>
+			</div>
+			<div class="modal-footer">
+			   <a href="#" class="btn delete" data-dismiss="modal">关闭</a>
+			   <a href="#" class="btn btn-primary" id="sendMessage">发送信息</a>
+			</div>
+		</div>
+		<!-- jquery vmap =====================================================-->
+		<div class="row-fluid">
+			<div class="widget span8">
+				<div class="widget-header">
+					<i class="icomoon-th-list"></i>
+					<h5>查看城市</h5>
+				</div>
+				<div class="worldcities">
+					<div id="vmap" style="width:600px;height:350px;float:left;"></div>
+					<div class="eachcountrydetail" id="eachcountrydetail">
+						<ul>
+							<li><label for="">国家</label><strong></strong></li>
+							<li><label for="">已上线城市</label><strong id="online_num"></strong>
+								<ul style="margin-left:20px;" id="online">
+								</ul>
+							</li>
+							<li><label for="">未上线城市</label><strong id="offline_num"></strong>
+								<ul style="margin-left:20px;" id="offline">
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+{
+	"name": "application-name",
+		"version": "0.0.1",
+		"private": true,
+		"scripts": {
+			"start": "node app"
+		},
+		"dependencies": {
+			"express": "3.1.0",
+			"ejs": "*",
+			"ejs-locals": "*",
+			"mongodb": "1.1.11",
+		  "lodash": "*",
+			"log4js": "*",
+			"imagemagick": "*",
+			"node-markdown": "0.1.0",
+			"eventproxy": "*",
+			"socket.io": "1.0.6",
+			"mongoose": "2.7.3",
+			"async": "*",
+			"sleep": ">=2.0.0",
+			"request": "*",
+			"domain": "*",
+	    "cheerio": "^0.19.0"
+		},
+		"devDependencies": {
+			"mocha": "*",
+			"supertest": "*"
+		},
+		"scripts": {
+			"test": "mocha -R spec"
+		}
+}

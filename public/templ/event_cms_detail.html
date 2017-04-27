@@ -1,0 +1,90 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>H5活动信息</legend>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="cityname" readonly placeholder="必填" value="{{city.name}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city._id}}'>{{city.name}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="event_cms-name"> 活动名称</label>
+            <div class="controls">
+                <input type="text" id="event_cms-name" placeholder="必填" value="{{name}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="stateinfo"> 活动状态</label>
+            <div class="controls">
+            <select  id="stateinfo"  style="width:10%" >
+                <option value="1" {{#ifCond state.type '1'}} selected {{/ifCond}}>未上线</option>
+                <option value="2" {{#ifCond state.type '2'}} selected {{/ifCond}}>报名中</option>
+                <option value="3" {{#ifCond state.type '3'}} selected {{/ifCond}}>报名截止</option>
+                <option value="4" {{#ifCond state.type '4'}} selected {{/ifCond}}>活动即将开放</option>
+                <option value="5" {{#ifCond state.type '5'}} selected {{/ifCond}}>往期回顾</option>
+            </select>
+        </div>
+        </div>
+     <div class="control-group">
+        <label class="control-label" for="event_cms-property-type">活动分类</label>
+        <div class="controls">
+            <select id="event_cms-property-type">
+                <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>分类1</option>
+                <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>分类2</option>
+                <option value="3" {{#ifCond type '3'}}selected{{/ifCond}}>分类3</option>
+                <option value="4" {{#ifCond type '4'}}selected{{/ifCond}}>分类4</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="event_cms-desc">活动分类描述</label>
+            <div class="controls">
+                <textarea id="event_cms-desc" cols="10">{{desc_type}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="event_cms-order">显示顺序</label>
+            <div class="controls">
+                <select id="event_cms-order">
+                    <option value="1" {{#ifCond order '1'}}selected{{/ifCond}}>1</option>
+                    <option value="2" {{#ifCond order '2'}}selected{{/ifCond}}>2</option>
+                    <option value="3" {{#ifCond order '3'}}selected{{/ifCond}}>3</option>
+                    <option value="4" {{#ifCond order '4'}}selected{{/ifCond}}>4</option>
+                    <option value="5" {{#ifCond order '5'}}selected{{/ifCond}}>5</option>
+                    <option value="6" {{#ifCond order '6'}}selected{{/ifCond}}>6</option>
+                    <option value="7" {{#ifCond order '7'}}selected{{/ifCond}}>7</option>
+                    <option value="8" {{#ifCond order '8'}}selected{{/ifCond}}>8</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="event_cms-sign_up">报名开始时间</label>
+            <div class="controls">
+                <input type="text" id="event_cms-sign_up" placeholder="点击此处添加时间" value="{{time.sign_up}}"  onfocus="setday(this)"  readonly="readonly" >
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="event_cms-active">活动开始时间</label>
+            <div class="controls">
+                <input type="text" id="event_cms-active" placeholder="点击此处添加时间" value="{{time.active}}"  onfocus="setday(this)"  readonly="readonly" >
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

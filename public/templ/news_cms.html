@@ -1,0 +1,79 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>新闻基本信息</legend>
+        <div class="control-group">
+            <label class="control-label" for="news_cms_type"> 新闻类型</label>
+            <div class="controls">
+                <select id="news_cms_type">
+                    <option value="1" {{#ifCond type '1'}} selected {{/ifCond}}>新闻详情</option>
+                    <option value="2" {{#ifCond type '2'}} selected {{/ifCond}}>专题汇总</option>
+                    <option value="3" {{#ifCond type '3'}} selected {{/ifCond}}>娱乐新闻</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="news_cms-create_date">  创建日期</label>
+            <div class="controls">
+                <input type="text" id="news_cms-create_date" placeholder="点击此处添加日期" value="{{last_modify_time}}"  onfocus="setday(this)"  readonly >
+            </div>
+        </div>  <div class="control-group">
+            <label class="control-label" for="news_cms-lead"> 专题标题</label>
+            <div class="controls">
+                <input type="text" id="news_cms-lead" value="{{lead}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="news_cms-lead_text"> 专题Text</label>
+            <div class="controls">
+                <textarea id="news_cms-lead_text">{{lead_text}}</textarea>
+            </div>
+        </div>
+        <input type="hidden" id="news_cms-image"  readonly value="{{image}}">
+        {{#if _id}}
+        <div class="control-group">
+            <label class="control-label" > 专题图片</label>
+            <div class="controls">
+                <button id="news_cms-list-item-image"class="btn btn-danger">上传图片</button></td>
+            </div>
+        </div>
+        <hr style="height:2px;border:none;border-top:1px solid #555555;">
+        <div class="control-group">
+            <label class="control-label" > 新闻内容</label>
+            <div class="controls">
+                <button id="news_cms-list-item-image_desc"  class="btn btn-danger">上传图片</button></th>
+            </div>
+        </div>
+        {{/if}}
+    </fieldset>
+   <!-- <fieldset>
+        <div class="control-group comments-group">
+            <label class="control-label">news_content</label>
+            <div class="controls">
+                <input type="button"  value="添加无图片信息"   id="addComment">
+            </div>
+        </div>
+        {{#if news_content}}
+        {{#each news_content}}
+        <div class="control-group comments-group">
+            <label class="control-label"><font color="red">原始新闻</font></label>
+            <div class="controls">
+                新闻标题:<input class="input-xlarge focused comments" name="title" style="width:300px"readonly type="text" value="{{title}}" /><br>
+                新闻URL: <input class="input-xlarge focused comments" name="rating"  style="width:300px"  readonly  type="text" value="{{url}}" ><br>
+                新闻来源 : <input class="input-xlarge focused comments" name="nickname"  style="width:300px"  readonly  type="text" value="{{source}}" ><br>
+                新闻日期: <input class="input-xlarge focused comments" name="nickname"  style="width:300px"  readonly type="text" value="{{date}}" ><br>
+                新闻图片描述 : <input class="input-xlarge focused comments" name="nickname" style="width:300px"   readonly type="text" value="{{image_desc}}" ><br>
+                新闻Text: <textarea class="input-xlarge focused comments" name="text"   style="width:300px" readonly>{{text}}</textarea><br>
+                新闻图片ID: <input class="input-xlarge focused comments" name="nickname"  style="width:500px"  type="text" readonly value="{{image}}" ><br>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </fieldset>-->
+
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

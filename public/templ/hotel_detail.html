@@ -1,0 +1,345 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>基本信息<a style="margin-left: 20px" id="back" href="">返回</a></legend>
+    <div class="control-group">
+        <label class="control-label" for="hotel-name">酒店名称</label>
+        <div class="controls">
+            <input type="text" id="hotel-name" placeholder="必填" value="{{name}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-property-type">类型</label>
+        <div class="controls">
+            <select id="hotel-property-type">Hotel | Hostel | Bed and Breakfast | Serviced Apartment | Resort | Villa | Mote
+                <option value="hotel" {{#ifCond property_type 'hotel'}}selected{{/ifCond}}>酒店</option>
+                <option value="hostel" {{#ifCond property_type 'hostel'}}selected{{/ifCond}}>家庭旅馆</option>
+                <option value="bed_and_breakfast" {{#ifCond property_type 'bed_and_breakfast'}}selected{{/ifCond}}>Bed and Breakfast</option>
+                <option value="serviced_apartment" {{#ifCond property_type 'serviced_apartment'}}selected{{/ifCond}}>酒店公寓</option>
+                <option value="resort" {{#ifCond property_type 'resort'}}selected{{/ifCond}}>Resort</option>
+                <option value="villa" {{#ifCond property_type 'villa'}}selected{{/ifCond}}>Villa</option>
+                <option value="motel" {{#ifCond property_type 'motel'}}selected{{/ifCond}}>汽车旅馆</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-stars">星级</label>
+            <div class="controls">
+                <input type="text" id="hotel-stars" placeholder="必填" value="{{stars}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-url">网址</label>
+            <div class="controls">
+                <input type="text" id="hotel-url" placeholder="必填" value="{{url}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-reservation-phone">预定电话</label>
+            <div class="controls">
+                <input type="text" id="hotel-reservation-phone" placeholder="必填" value="{{reservation_phone}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-fax">传真</label>
+            <div class="controls">
+                <input type="text" id="hotel-fax" placeholder="必填" value="{{fax}}">
+            </div>
+        </div>
+
+    <div class="control-group">
+        <label class="control-label" for="hotel-district">区域</label>
+        <div class="controls">
+            <input type="text" id="hotel-district" placeholder="必填">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-city">城市</label>
+        <div class="controls">
+            <input type="text" id="hotel-city" placeholder="必填" value="{{city}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-country">国家</label>
+        <div class="controls">
+            <input type="text" id="hotel-country" placeholder="必填" value="{{country}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-continents">洲际</label>
+        <div class="controls">
+            <input type="text" id="hotel-continents" placeholder="必填" value="{{continents}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-state">省份</label>
+        <div class="controls">
+            <input type="text" id="hotel-state" placeholder="必填" value="{{state}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-state-code">省份编码</label>
+        <div class="controls">
+            <input type="text" id="hotel-state-code" placeholder="必填" value="{{state_code}}">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hotel-address">地址</label>
+        <div class="controls">
+            <input type="text" id="hotel-address" placeholder="必填" class="input input-xxlarge" value="{{address}}">
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-postal-code">邮编</label>
+            <div class="controls">
+                <input type="text" id="hotel-postal-code" placeholder="必填" value="{{postal_code}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-longitude">经度</label>
+            <div class="controls">
+                <input type="text" id="hotel-longitude" placeholder="必填" value="{{longitude}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-latitude">纬度</label>
+            <div class="controls">
+                <input type="text" id="hotel-latitude" placeholder="必填" value="{{latitude}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-overview">简介</label>
+            <div class="controls">
+                <textarea id="hotel-overview" placeholder="" class="form-control" rows="3">
+                    {{overview}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="control-group hotel-room-group">
+            <label class="control-label" for="label">酒店概述</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-desc"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-desc" rows="4">{{hotel_desc}}</textarea>
+                        <div id="show_hotel_desc" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-desc" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+
+        <div class="control-group hotel-room-group">
+            <label class="control-label" for="label">房间介绍</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-room"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-room" rows="4">{{hotel_desc}}</textarea>
+                        <div id="show_hotel_room" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-room" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+        <div class="control-group hotel-service-group">
+            <label class="control-label" for="label">酒店服务</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-service"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-service" rows="4">{{hotel_service}}</textarea>
+                        <div id="show_hotel_service" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-service" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+        <div class="control-group hotel-hot-group">
+            <label class="control-label" for="label">周边热点</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-hot"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-hot" rows="4">{{hotel_hot}}</textarea>
+                        <div id="show_hotel_hot" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-hot" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+        <div class="control-group hotel-appraise-group">
+            <label class="control-label" for="label">旅客评价</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-appraise"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-appraise" rows="4">{{hotel_appraise}}</textarea>
+                        <div id="show_hotel_appraise" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-appraise" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+        <div class="control-group hotel-traffic-group">
+            <label class="control-label" for="label">位置交通</label>
+            <div class="controls">
+                <div class="wmd-panel">
+                    <div id="wmd-button-bar-traffic"></div>
+                    <div><textarea class="wmd-input" id="wmd-input-traffic" rows="4">{{hotel_traffic}}</textarea>
+                        <div id="show_hotel_traffic" style:"display:none"><a>预览</a></div>
+                    </div>
+                </div>
+                <div id="wmd-preview-traffic" class="wmd-panel wmd-preview"></div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="hotel-area-description">周围环境</label>
+            <div class="controls">
+                <input type="text" id="hotel-area-description" placeholder="必填" value="{{area_description}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-from-price">最低价格</label>
+            <div class="controls">
+                <input type="text" id="hotel-from-price" placeholder="必填" value="{{from_price}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-website-price">酒店网站价格</label>
+            <div class="controls">
+                <input type="text" id="hotel-website-price" placeholder="必填" value="{{website_price}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-currency">货币</label>
+            <div class="controls">
+                <input type="text" id="hotel-currency" placeholder="必填" value="{{hotel_currency}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">信用卡</label>
+            <div id="hotel-accept-creditcards" class="controls">
+                <label class="checkbox inline">
+                    <input type="checkbox" id="hotel-creditcard-visa" value="VISA" {{#ifHas creditcards 'VISA'}}checked{{/ifHas}}> VISA
+                </label>
+                <label class="checkbox inline">
+                    <input type="checkbox" id="hotel-creditcard-mastercard" value="MASTERCARD" {{#ifHas creditcards 'MASTERCARD'}}checked{{/ifHas}}> MasterCard
+                </label>
+                <label class="checkbox inline">
+                    <input type="checkbox" id="hotel-creditcard-americanexpress" value="AMERICANEXPRESS" {{#ifHas creditcards 'AMERICANEXPRESS'}}checked{{/ifHas}}> American Express
+                </label>
+                <label class="checkbox inline">
+                    <input type="checkbox" id="hotel-creditcard-jcb" value="JCB" {{#ifHas creditcards 'JCB'}}checked{{/ifHas}}> JCB
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">推荐到首页</label>
+            <div class="controls">
+                {{#ifCond isviewindex '1'}}
+                    <input type="radio" name="isviewindex" value = "1" checked>推荐<br>
+                    <input type="radio" name="isviewindex" value = "0" >不推荐<br>
+                {{else}}
+                <input type="radio" name="isviewindex" value = "1" >推荐<br>
+                <input type="radio" name="isviewindex" value = "0" checked>不推荐<br>
+                {{/ifCond}}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">推荐到首页大图</label>
+            <div class="controls">
+                {{#ifCond isviewindex_big '1'}}
+                    <input type="radio" name="isviewindex_big" value = "1" checked>推荐<br>
+                    <input type="radio" name="isviewindex_big" value = "0" >不推荐<br>
+                {{else}}
+                <input type="radio" name="isviewindex_big" value = "1" >推荐<br>
+                <input type="radio" name="isviewindex_big" value = "0" checked>不推荐<br>
+                {{/ifCond}}
+            </div>
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend>服务设施</legend>
+        <div class="control-group">
+            <label class="control-label" for="hotel-pet-friendly">允许带入宠物</label>
+            <div class="controls">
+                <input id="hotel-pet-friendly" type="checkbox" {{#if facilities.pet_friendly}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-restaurant">有餐厅</label>
+            <div class="controls">
+                <input id="hotel-restaurant" type="checkbox" {{#if facilities.restaurant}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-free-wifi">免费WIFI</label>
+            <div class="controls">
+                <input id="hotel-free-wifi" type="checkbox" {{#if facilities.free_wifi}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-gym">健身房</label>
+            <div class="controls">
+                <input id="hotel-gym" type="checkbox" {{#if facilities.gym}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-handicap-accessible">俱乐部</label>
+            <div class="controls">
+                <input id="hotel-handicap-accessible" type="checkbox" {{#if facilities.handicap_accessible}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-bar">酒吧</label>
+            <div class="controls">
+                <input id="hotel-bar" type="checkbox" {{#if facilities.bar}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-room-service">房间客服</label>
+            <div class="controls">
+                <input id="hotel-room-service" type="checkbox" {{#if facilities.room_service}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-breakfast">早餐</label>
+            <div class="controls">
+                <input id="hotel-breakfast" type="checkbox" {{#if facilities.breakfast}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-pool">游泳池</label>
+            <div class="controls">
+                <input id="hotel-pool" type="checkbox" {{#if facilities.pool}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-spa">推拿</label>
+            <div class="controls">
+                <input id="hotel-spa" type="checkbox" {{#if facilities.spa}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-parking-onsite">停车场</label>
+            <div class="controls">
+                <input id="hotel-parking-onsite" type="checkbox" {{#if facilities.parking_onsite}}checked{{/if}}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="hotel-babysitting">育儿室</label>
+            <div class="controls">
+                <input id="hotel-babysitting" type="checkbox" {{#if facilities.babysitting}}checked{{/if}}>
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <label class="control-label" for="hotel-to-list">公开显示酒店</label>
+        <input id="hotel-to-list" type="checkbox" {{#if to_list}}checked{{/if}}>
+        {{#ifCond user.type "-1"}}
+        {{else}}
+        <button id="hotel-save" class="btn btn-primary">保存</button>
+        {{/ifCond}}
+        <button class="btn" id="cancel">取消</button>
+    </div>
+</form>

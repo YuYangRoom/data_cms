@@ -1,0 +1,37 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+.DS_Store
+node_modules
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+config/Config.js
+bower_components
+
+# Maven
+target/
+*.ser
+*.ec
+
+# IntelliJ Idea
+.idea/
+out/
+*.ipr
+*.iws
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/

@@ -1,0 +1,38 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>品牌信息</legend>
+    <div class="control-group">
+        <label class="control-label" for="brand-property-type">品牌类别</label>
+        <div class="controls">
+            <select id="brand-property-type">餐馆 | 购物 | 娱乐
+                <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>餐馆</option>
+                <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>购物</option>
+                <option value="3" {{#ifCond type '3'}}selected{{/ifCond}}>娱乐</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="brand-title"> 品牌名称</label>
+            <div class="controls">
+                <input type="text" id="brand-title" placeholder="必填" value="{{title}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="brand-advice"> 品牌推荐</label>
+            <div class="controls">
+                <input type="text" id="brand-advice" placeholder="必填" value="{{advice}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="brand-desc">品牌描述</label>
+            <div class="controls">
+              <!--  <input type="text" id="brand-desc" placeholder="必填" value="{{desc}}">-->
+                <textarea   id="brand-desc" cols="10">{{desc}}</textarea>
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

@@ -1,0 +1,308 @@
+var items = [{
+	"name": "Afghan",
+	"cn_name": "阿富汗菜"
+}, {
+	"name": "African",
+	"cn_name": "非洲菜"
+}, {
+	"name": "American (New)",
+	"cn_name": "美国（新的）菜"
+}, {
+	"name": "American (Traditional)",
+	"cn_name": "美国（传统）菜"
+}, {
+	"name": "Arabian",
+	"cn_name": "阿拉伯菜"
+}, {
+	"name": "Argentine",
+	"cn_name": "阿根廷菜"
+}, {
+	"name": "Armenian",
+	"cn_name": "亚美尼亚菜"
+}, {
+	"name": "Asian Fusion",
+	"cn_name": "亚洲菜"
+}, {
+	"name": "Austrian",
+	"cn_name": "奥地利菜"
+}, {
+	"name": "Bangladeshi",
+	"cn_name": "孟加拉国菜"
+}, {
+	"name": "Australian",
+	"cn_name": "澳大利亚菜"
+}, {
+	"name": "Barbeque",
+	"cn_name": "烧烤"
+}, {
+	"name": "Basque",
+	"cn_name": "巴斯克菜"
+}, {
+	"name": "Belgian",
+	"cn_name": "比利时菜"
+}, {
+	"name": "Brasseries",
+	"cn_name": "餐馆"
+}, {
+	"name": "Breakfast  Brunch",
+	"cn_name": "早餐午餐"
+}, {
+	"name": "British",
+	"cn_name": "英国菜"
+}, {
+	"name": "Buffets",
+	"cn_name": "冷餐"
+}, {
+	"name": "Burgers",
+	"cn_name": "汉堡"
+}, {
+	"name": "Brazilian",
+	"cn_name": "巴西菜"
+}, {
+	"name": "Burmese",
+	"cn_name": "缅甸菜"
+}, {
+	"name": "Cafes",
+	"cn_name": "咖啡馆"
+}, {
+	"name": "Cafeteria",
+	"cn_name": "餐厅"
+}, {
+	"name": "Cajun/Creole",
+	"cn_name": "克里奥尔菜"
+}, {
+	"name": "Cambodian",
+	"cn_name": "柬埔寨菜"
+}, {
+	"name": "Caribbean",
+	"cn_name": "加勒比菜"
+}, {
+	"name": "Cheesesteaks",
+	"cn_name": "美味的干酪牛肉三明治"
+}, {
+	"name": "Catalan",
+	"cn_name": "加泰罗尼亚语"
+}, {
+	"name": "Chinese",
+	"cn_name": "中国菜"
+}, {
+	"name": "Chicken Wings",
+	"cn_name": "鸡翼"
+}, {
+	"name": "Comfort Food",
+	"cn_name": "舒适的食物"
+}, {
+	"name": "Creperies",
+	"cn_name": "圣米歇尔菜"
+}, {
+	"name": "Cuban",
+	"cn_name": "古巴菜"
+}, {
+	"name": "Diners",
+	"cn_name": "食客"
+}, {
+	"name": "Czech",
+	"cn_name": "捷克菜"
+}, {
+	"name": "Delis",
+	"cn_name": "熟食店"
+}, {
+	"name": "Ethiopian",
+	"cn_name": "埃塞俄比亚菜"
+}, {
+	"name": "Fast Food",
+	"cn_name": "快餐"
+}, {
+	"name": "Filipino",
+	"cn_name": "菲律宾菜"
+}, {
+	"name": "Fish  Chips",
+	"cn_name": "炸鱼薯条"
+}, {
+	"name": "Fondue",
+	"cn_name": "火锅"
+}, {
+	"name": "Food Court",
+	"cn_name": "餐饮广场"
+}, {
+	"name": "Food Stands",
+	"cn_name": "食品站"
+}, {
+	"name": "French",
+	"cn_name": "法国菜"
+}, {
+	"name": "Gastropubs",
+	"cn_name": "新式餐吧"
+}, {
+	"name": "German",
+	"cn_name": "德国菜"
+}, {
+	"name": "Halal",
+	"cn_name": "清真"
+}, {
+	"name": "Gluten-Free",
+	"cn_name": "无麸质"
+}, {
+	"name": "Greek",
+	"cn_name": "希腊菜"
+}, {
+	"name": "Hawaiian",
+	"cn_name": "夏威夷菜"
+}, {
+	"name": "Hot Dogs",
+	"cn_name": "热狗"
+}, {
+	"name": "Himalayan/Nepalese",
+	"cn_name": "喜马拉雅/尼泊尔菜"
+}, {
+	"name": "Hot Pot",
+	"cn_name": "火锅"
+}, {
+	"name": "Hungarian",
+	"cn_name": "匈牙利菜"
+}, {
+	"name": "Iberian",
+	"cn_name": "伊比利亚菜"
+}, {
+	"name": "Irish",
+	"cn_name": "爱尔兰菜"
+}, {
+	"name": "Indonesian",
+	"cn_name": "印尼菜"
+}, {
+	"name": "Indian",
+	"cn_name": "印度菜"
+}, {
+	"name": "Japanese",
+	"cn_name": "日本菜"
+}, {
+	"name": "Italian",
+	"cn_name": "意大利菜"
+}, {
+	"name": "Korean",
+	"cn_name": "韩国菜"
+}, {
+	"name": "Kosher",
+	"cn_name": "犹太菜"
+}, {
+	"name": "Latin American",
+	"cn_name": "拉美菜"
+}, {
+	"name": "Laotian",
+	"cn_name": "老挝菜"
+}, {
+	"name": "Malaysian",
+	"cn_name": "马来西亚菜"
+}, {
+	"name": "Mediterranean",
+	"cn_name": "地中海菜"
+}, {
+	"name": "Live/Raw Food",
+	"cn_name": "生活/食品原料"
+}, {
+	"name": "Mexican",
+	"cn_name": "墨西哥菜"
+}, {
+	"name": "Middle Eastern",
+	"cn_name": "中东菜"
+}, {
+	"name": "Modern European",
+	"cn_name": "现代欧洲菜"
+}, {
+	"name": "Pakistani",
+	"cn_name": "巴基斯坦菜"
+}, {
+	"name": "Mongolian",
+	"cn_name": "蒙古族菜"
+}, {
+	"name": "Moroccan",
+	"cn_name": "摩洛哥菜"
+}, {
+	"name": "Persian/Iranian",
+	"cn_name": "波斯/伊朗菜"
+}, {
+	"name": "Peruvian",
+	"cn_name": "秘鲁菜"
+}, {
+	"name": "Pizza",
+	"cn_name": "比萨"
+}, {
+	"name": "Portuguese",
+	"cn_name": "Portuguese"
+}, {
+	"name": "Russian",
+	"cn_name": "俄国菜"
+}, {
+	"name": "Polish",
+	"cn_name": "波兰菜"
+}, {
+	"name": "Salad",
+	"cn_name": "沙拉"
+}, {
+	"name": "Sandwiches",
+	"cn_name": "三明治"
+}, {
+	"name": "Scandinavian",
+	"cn_name": "斯堪的纳维亚"
+}, {
+	"name": "Seafood",
+	"cn_name": "海鲜"
+}, {
+	"name": "Scottish",
+	"cn_name": "苏格兰菜"
+}, {
+	"name": "Singaporean",
+	"cn_name": "新加坡菜"
+}, {
+	"name": "Slovakian",
+	"cn_name": "斯洛伐克菜"
+}, {
+	"name": "Soul Food",
+	"cn_name": "灵魂的食物"
+}, {
+	"name": "Spanish",
+	"cn_name": "西班牙菜"
+}, {
+	"name": "Southern",
+	"cn_name": "南部"
+}, {
+	"name": "Soup",
+	"cn_name": "汤"
+}, {
+	"name": "Sushi Bars",
+	"cn_name": "寿司店"
+}, {
+	"name": "Taiwanese",
+	"cn_name": "台湾菜"
+}, {
+	"name": "Steakhouses",
+	"cn_name": "牛排餐厅"
+}, {
+	"name": "Tapas Bars",
+	"cn_name": "小吃酒吧"
+}, {
+	"name": "Tex-Mex",
+	"cn_name": "德州菜"
+}, {
+	"name": "Tapas/Small Plates",
+	"cn_name": "小吃 /小盘子"
+}, {
+	"name": "Thai",
+	"cn_name": "泰国菜"
+}, {
+	"name": "Ukrainian",
+	"cn_name": "乌克兰菜"
+}, {
+	"name": "Turkish",
+	"cn_name": "土耳其菜"
+}, {
+	"name": "Vegan",
+	"cn_name": "素食主义者"
+}, {
+	"name": "Vegetarian",
+	"cn_name": "素食主义者"
+}, {
+	"name": "Vietnamese",
+	"cn_name": "越南菜"
+}];
+exports.items = items;

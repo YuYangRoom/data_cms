@@ -1,0 +1,344 @@
+.cmsNav
+{
+    position: fixed;
+    top: 50px;
+    width: 130px;
+    height: 100%;
+    background: rgba(47,47,47,.7);
+}
+.cmsNav a
+{
+    line-height: 40px;
+    position: relative;
+    display: block;
+    height: 40px;
+    color: #fff;
+}
+.cmsNav a:before
+{
+    margin: 0 5px 0 15px;
+}
+.cmsNav a.active
+{
+    background: #888;
+}
+.cmsNav a:hover
+{
+    background: #c2c2c2;
+}
+.cmsContainer
+{
+    position: relative;
+    top: 50px;
+    width: calc(100% - 150px);
+    margin: 0 0 0 140px;
+}
+.cmsPageStatus
+{
+    margin: 30px 0;
+}
+.cmsPageStatus dl
+{
+    line-height: 30px;
+    height: 30px;
+}
+.cmsPageStatus dl dt
+{
+    font-size: 20px;
+}
+.cmsPageStatus dl dt,.cmsPageStatus dl dd
+{
+    line-height: 30px;
+    float: left;
+}
+.cmsPageStatus dd a
+{
+    line-height: 30px;
+    display: inline-block;
+    min-width: 100px;
+    height: 30px;
+    margin: -3px 0 0 0;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #1abc9c;
+    text-shadow: none;
+}
+.cmsPageStatus button
+{
+    width: 80px;
+    height: 30px;
+    margin: -3px 0 0 0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #1abc9c;
+    text-shadow: none;
+}
+.cmsPageStatus button:hover,.cmsPageStatus dd a:hover
+{
+    background: #16a085;
+}
+.cmsTable
+{
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.cmsTable th,.cmsTable td
+{
+    padding: 8px 5px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.cmsEditorTask,.cmsEditorFeedback
+{
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+.cmsEditorTask thead,.cmsEditorFeedback thead
+{
+    text-align: left;
+}
+.cmsEditorTask tbody tr:nth-child(odd),
+.cmsEditorFeedback tbody tr:nth-child(odd)
+{
+    background: #e6e6e6;
+}
+.cmsEditorTask td,
+.cmsEditorFeedback td
+{
+    padding: 5px;
+}
+.cmsEditorTask td:first-child,
+.cmsEditorFeedback td:first-child
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.cmsEditorTask td:last-child,
+.cmsEditorFeedback td:last-child
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.cmsEditorTask th,
+.cmsEditorFeedback th
+{
+    padding: 8px 5px;
+}
+.cmsEditorTask caption,
+.cmsEditorFeedback caption
+{
+    text-align: left;
+}
+.cmsEditorHistory
+{
+    margin: 0 0 30px 0;
+}
+.cmsEditorHistory ul
+{
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+.cmsEditorHistory ul li
+{
+    font-weight: bold;
+    line-height: 30px;
+    display: inline-block;
+    float: left;
+    width: 11%;
+    margin: 0;
+    text-indent: 5px;
+}
+.cmsEditorHistory-items
+{
+    width: 100%;
+}
+.cmsEditorHistory-items .ehitem
+{
+    line-height: 30px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+}
+.cmsEditorHistory-items .ehitem span
+{
+    display: inline-block;
+    float: left;
+    width: 11%;
+    height: 30px;
+    text-indent: 5px;
+}
+.cmsEditorHistory-items .ehitem:nth-child(odd) span
+{
+    background: #e6e6e6;
+}
+.cmsEditorHistory-items .ehitem p
+{
+    position: relative;
+    display: none;
+    float: right;
+    width: 100%;
+    padding: 5px 0;
+    text-indent: 10px;
+    color: #fff;
+    border-radius: 5px;
+    background: #4fc784;
+}
+.cmsEditorHistory-items .ehitem p:before
+{
+    position: absolute;
+    top: -7px;
+    right: 16%;
+    display: block;
+    content: '';
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #4fc784;
+    border-left: 10px solid transparent;
+}
+.cmsEditorHistory-items .ehitem .showDetail
+{
+    cursor: pointer;
+}
+.qq-uploader
+{
+    position: relative;
+    width: 100%;
+}
+.qq-upload-button
+{
+    display: block; /* or inline-block */
+    width: 105px;
+    padding: 7px 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+    background: #800;
+}
+.qq-upload-button-hover
+{
+    background: #c00;
+}
+.qq-upload-button-focus
+{
+    outline: 1px dotted black;
+}
+.qq-upload-drop-area
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 70px;
+    text-align: center;
+    background: #ff9797;
+}
+.qq-upload-drop-area span
+{
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    margin-top: -8px;
+}
+.qq-upload-drop-area-active
+{
+    background: #ff7171;
+}
+.qq-upload-list
+{
+    margin: 15px 35px;
+    padding: 0;
+    list-style: disc;
+}
+.qq-upload-list li
+{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.qq-upload-file,
+.qq-upload-spinner,
+.qq-upload-size,
+.qq-upload-cancel,
+.qq-upload-failed-text
+{
+    margin-right: 7px;
+}
+.qq-upload-spinner
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-bottom;
+    background: url('loading.gif');
+}
+.qq-upload-size,
+.qq-upload-cancel
+{
+    font-size: 11px;
+}
+.qq-upload-failed-text
+{
+    display: none;
+}
+.qq-upload-fail .qq-upload-failed-text
+{
+    display: inline;
+}
+.cmsQueryBar span
+{
+    line-height: 30px;
+    display: inline-block;
+    height: 30px;
+}
+.cmsQueryBar button
+{
+    width: 80px;
+    height: 30px;
+    margin: -13px 0 0 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #1abc9c;
+    text-shadow: none;
+}
+.cmsPageNum
+{
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cmsPageNum label
+{
+    font-size: 18px;
+    line-height: 26px;
+    display: inline-block;
+    float: left;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+.cmsPageNum button
+{
+    float: left;
+    width: 70px;
+    height: 30px;
+    margin: 0 5px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #1abc9c;
+    text-shadow: none;
+}
+.cmsPageNum button:hover
+{
+    background: #16a085;
+}

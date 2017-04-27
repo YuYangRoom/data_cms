@@ -1,0 +1,1800 @@
+exports.items = [{"_id": "516cc451e3c6a60f69000061",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.101693",
+	"longitude": "-118.338042"
+}, {
+	"_id": "516cc451e3c6a60f69000062",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.062184",
+	"longitude": "-118.355579"
+}, {
+	"_id": "516cc451e3c6a60f69000063",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.053437",
+	"longitude": "-118.250672"
+}, {
+	"_id": "516cc451e3c6a60f69000064",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.06347",
+	"longitude": "-118.35851"
+}, {
+	"_id": "516cc451e3c6a60f69000065",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.101777",
+	"longitude": "-118.340969"
+}, {
+	"_id": "516cc451e3c6a60f69000066",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "32.688184",
+	"longitude": "-117.195754"
+}, {
+	"_id": "516cc451e3c6a60f69000067",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.709854",
+	"longitude": "-118.284219"
+}, {
+	"_id": "516cc451e3c6a60f69000068",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.842259",
+	"longitude": "-117.999575"
+}, {
+	"_id": "516cc451e3c6a60f69000069",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.05463206",
+	"longitude": "-118.2362662"
+}, {
+	"_id": "516cc451e3c6a60f6900006a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.13842",
+	"longitude": "-118.353149"
+}, {
+	"_id": "516cc451e3c6a60f6900006b",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.06145",
+	"longitude": "-118.27151"
+}, {
+	"_id": "516cc451e3c6a60f6900006c",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.7435160714",
+	"longitude": "-118.377173245"
+}, {
+	"_id": "516cc451e3c6a60f6900006d",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.101464",
+	"longitude": "-118.457229"
+}, {
+	"_id": "516cc451e3c6a60f6900006e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.056328",
+	"longitude": "-118.240418"
+}, {
+	"_id": "516cc451e3c6a60f6900006f",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.146751",
+	"longitude": "-118.141021"
+}, {
+	"_id": "516cc451e3c6a60f69000070",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.985609",
+	"longitude": "-118.472829"
+}, {
+	"_id": "516cc451e3c6a60f69000071",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.053411",
+	"longitude": "-118.243806"
+}, {
+	"_id": "516cc451e3c6a60f69000072",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.144856",
+	"longitude": "-118.050797"
+}, {
+	"_id": "516cc451e3c6a60f69000073",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.064354",
+	"longitude": "-118.370025"
+}, {
+	"_id": "516cc451e3c6a60f69000074",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.01553",
+	"longitude": "-118.286136"
+}, {
+	"_id": "516cc451e3c6a60f69000076",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.002332",
+	"longitude": "-118.48978"
+}, {
+	"_id": "516cc451e3c6a60f69000077",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.101464",
+	"longitude": "-118.457229"
+}, {
+	"_id": "516cc451e3c6a60f69000078",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.118284",
+	"longitude": "-118.300341"
+}, {
+	"_id": "516cc451e3c6a60f69000079",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.073777",
+	"longitude": "-118.400388"
+}, {
+	"_id": "516cc451e3c6a60f6900007a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.016335",
+	"longitude": "-118.496856"
+}, {
+	"_id": "516cc451e3c6a60f6900007b",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.079056",
+	"longitude": "-118.474409"
+}, {
+	"_id": "516cc451e3c6a60f6900007c",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.132648",
+	"longitude": "-118.283446"
+}, {
+	"_id": "516cc451e3c6a60f6900007d",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.092811",
+	"longitude": "-118.32866"
+}, {
+	"_id": "516cc451e3c6a60f6900007e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.058355",
+	"longitude": "-118.245732"
+}, {
+	"_id": "516cc451e3c6a60f6900007f",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.129466",
+	"longitude": "-118.109875"
+}, {
+	"_id": "516cc451e3c6a60f69000080",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.017262",
+	"longitude": "-118.288786"
+}, {
+	"_id": "516cc451e3c6a60f69000081",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.101566",
+	"longitude": "-118.335199"
+}, {
+	"_id": "516cc451e3c6a60f69000082",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.102555",
+	"longitude": "-118.341661"
+}, {
+	"_id": "516cc451e3c6a60f69000083",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.055471",
+	"longitude": "-118.249763"
+}, {
+	"_id": "516cc451e3c6a60f69000084",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.0445143",
+	"longitude": "-118.2648984"
+}, {
+	"_id": "516cc451e3c6a60f69000085",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.146001",
+	"longitude": "-118.159678"
+}, {
+	"_id": "516cc451e3c6a60f69000086",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.052342",
+	"longitude": "-118.239512"
+}, {
+	"_id": "52144f9b662ce99c4e000001",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.058668",
+	"longitude": "-118.237644"
+}, {
+	"_id": "52145485662ce99c4e000005",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.922779",
+	"longitude": "-118.352968"
+}, {
+	"_id": "52145623662ce99c4e000009",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.972406",
+	"longitude": "-118.269413"
+}, {
+	"_id": "521457fb662ce99c4e00000d",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.872304",
+	"longitude": "-118.35975"
+}, {
+	"_id": "52145ee8662ce99c4e000011",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.024316",
+	"longitude": "-118.278984"
+}, {
+	"_id": "521460d0662ce99c4e000015",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.930613",
+	"longitude": "-118.352465"
+}, {
+	"_id": "5214630c662ce99c4e000019",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.076923",
+	"longitude": "-118.291858"
+}, {
+	"_id": "521464fa662ce99c4e00001d",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.103792",
+	"longitude": "-118.328851"
+}, {
+	"_id": "5214660a662ce99c4e00001e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.098071",
+	"longitude": "-118.342239"
+}, {
+	"_id": "52146817662ce99c4e000025",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.959593",
+	"longitude": "-118.38507"
+}, {
+	"_id": "521469ab662ce99c4e000029",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.019674",
+	"longitude": "-118.281108"
+}, {
+	"_id": "52146af7662ce99c4e00002d",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.145144",
+	"longitude": "-118.370157"
+}, {
+	"_id": "52146cc4662ce99c4e000031",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.900457",
+	"longitude": "-118.378481"
+}, {
+	"_id": "52146e36662ce99c4e000035",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.04681",
+	"longitude": "-118.260809"
+}, {
+	"_id": "52147079662ce99c4e00003f",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.138165",
+	"longitude": "-118.365075"
+}, {
+	"_id": "5214716e662ce99c4e000043",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.946172",
+	"longitude": "-118.381635"
+}, {
+	"_id": "5214729e662ce99c4e000047",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.930827",
+	"longitude": "-118.399769"
+}, {
+	"_id": "52147567662ce99c4e00004a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.005908",
+	"longitude": "-118.489642"
+}, {
+	"_id": "521477e8662ce99c4e00004e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.083592",
+	"longitude": "-118.362902"
+}, {
+	"_id": "5214794f662ce99c4e000052",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.056357",
+	"longitude": "-118.395735"
+}, {
+	"_id": "52147a19662ce99c4e000056",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.049686",
+	"longitude": "-118.256311"
+}, {
+	"_id": "52147b93662ce99c4e00005a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.049784",
+	"longitude": "-118.254141"
+}, {
+	"_id": "52147c91662ce99c4e00005e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.089932",
+	"longitude": "-118.379041"
+}, {
+	"_id": "52147dc9662ce99c4e000062",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.986401",
+	"longitude": "-118.473178"
+}, {
+	"_id": "52147e97662ce99c4e000066",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.047775",
+	"longitude": "-118.258232"
+}, {
+	"_id": "52147f74662ce99c4e00006a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.057726",
+	"longitude": "-118.415605"
+}, {
+	"_id": "521480ee662ce99c4e00006e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.09895",
+	"longitude": "-118.321801"
+}, {
+	"_id": "521481ef662ce99c4e000072",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.021053",
+	"longitude": "-118.502033"
+}, {
+	"_id": "521482fb662ce99c4e000076",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.100747",
+	"longitude": "-118.325474"
+}, {
+	"_id": "52148409662ce99c4e00007a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.045272",
+	"longitude": "-118.26711"
+}, {
+	"_id": "521484e8662ce99c4e00007e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.072551",
+	"longitude": "-118.389274"
+}, {
+	"_id": "521486c9662ce99c4e000082",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.021337",
+	"longitude": "-118.50594"
+}, {
+	"_id": "52148796662ce99c4e000086",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.067992",
+	"longitude": "-118.398586"
+}, {
+	"_id": "52148876662ce99c4e00008a",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.066925",
+	"longitude": "-118.400732"
+}, {
+	"_id": "521489da662ce99c4e00008e",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.095379",
+	"longitude": "-118.373245"
+}, {
+	"_id": "52148b59662ce99c4e000092",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "34.044339",
+	"longitude": "-118.25075"
+}, {
+	"_id": "52149b97662ce99c4e000096",
+	"type": 0,
+	"city_name": "洛杉矶",
+	"latitude": "33.944606",
+	"longitude": "-118.374082"
+}, {
+	"_id": "5322c157448ab9842a000001",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1310746346",
+	"longitude": "-118.216671693"
+}, {
+	"_id": "5322c157448ab9842a000002",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1822764",
+	"longitude": "-118.3045755"
+}, {
+	"_id": "5322c157448ab9842a000003",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.061788",
+	"longitude": "-118.299571"
+}, {
+	"_id": "5322c157448ab9842a000004",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.052395",
+	"longitude": "-118.304474"
+}, {
+	"_id": "5322c157448ab9842a000005",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.983607653",
+	"longitude": "-118.18568752"
+}, {
+	"_id": "5322c157448ab9842a000006",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1580401",
+	"longitude": "-118.2635308"
+}, {
+	"_id": "5322c157448ab9842a000007",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0431615",
+	"longitude": "-118.422266"
+}, {
+	"_id": "5322c157448ab9842a000008",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0173639",
+	"longitude": "-118.2780569"
+}, {
+	"_id": "5322c157448ab9842a000009",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9633442",
+	"longitude": "-118.3519073"
+}, {
+	"_id": "5322c157448ab9842a00000a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.940672",
+	"longitude": "-118.133542"
+}, {
+	"_id": "5322c157448ab9842a00000b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.10885",
+	"longitude": "-118.2234229"
+}, {
+	"_id": "5322c157448ab9842a00000c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.094521",
+	"longitude": "-118.313701"
+}, {
+	"_id": "5322c157448ab9842a00000d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.10885",
+	"longitude": "-118.2234229"
+}, {
+	"_id": "5322c157448ab9842a00000e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0640722451",
+	"longitude": "-118.297691345"
+}, {
+	"_id": "5322c157448ab9842a00000f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1827743",
+	"longitude": "-118.4490053"
+}, {
+	"_id": "5322c157448ab9842a000010",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1409214",
+	"longitude": "-118.2585636"
+}, {
+	"_id": "5322c157448ab9842a000011",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1863943",
+	"longitude": "-118.431268"
+}, {
+	"_id": "5322c157448ab9842a000012",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.056277",
+	"longitude": "-118.276793"
+}, {
+	"_id": "5322c157448ab9842a000013",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1310746346",
+	"longitude": "-118.216671693"
+}, {
+	"_id": "5322c157448ab9842a000014",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.068819",
+	"longitude": "-118.398908"
+}, {
+	"_id": "5322c157448ab9842a000015",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0834861",
+	"longitude": "-118.3127613"
+}, {
+	"_id": "5322c157448ab9842a000016",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.029909",
+	"longitude": "-118.268709"
+}, {
+	"_id": "5322c157448ab9842a000017",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0346054",
+	"longitude": "-118.2322826"
+}, {
+	"_id": "5322c157448ab9842a000018",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9975444",
+	"longitude": "-118.4750532"
+}, {
+	"_id": "5322c157448ab9842a000019",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0763518",
+	"longitude": "-118.3563272"
+}, {
+	"_id": "5322c157448ab9842a00001a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.045441",
+	"longitude": "-118.256282"
+}, {
+	"_id": "5322c157448ab9842a00001b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0518058179",
+	"longitude": "-118.36744956"
+}, {
+	"_id": "5322c157448ab9842a00001c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1645724",
+	"longitude": "-118.4478628"
+}, {
+	"_id": "5322c157448ab9842a00001d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0016831",
+	"longitude": "-118.4831059"
+}, {
+	"_id": "5322c157448ab9842a00001e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1036891",
+	"longitude": "-118.2912407"
+}, {
+	"_id": "5322c157448ab9842a00001f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1332393",
+	"longitude": "-118.3573699"
+}, {
+	"_id": "5322c157448ab9842a000020",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0472229",
+	"longitude": "-118.2861495"
+}, {
+	"_id": "5322c157448ab9842a000021",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9776099",
+	"longitude": "-118.438465"
+}, {
+	"_id": "5322c157448ab9842a000022",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.051298",
+	"longitude": "-118.255131"
+}, {
+	"_id": "5322c157448ab9842a000023",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0753224",
+	"longitude": "-118.3238059"
+}, {
+	"_id": "5322c157448ab9842a000024",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.172636",
+	"longitude": "-118.370718"
+}, {
+	"_id": "5322c157448ab9842a000025",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0834879",
+	"longitude": "-118.3518564"
+}, {
+	"_id": "5322c157448ab9842a000026",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.048128",
+	"longitude": "-118.211476"
+}, {
+	"_id": "5322c157448ab9842a000027",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.047149",
+	"longitude": "-118.247075"
+}, {
+	"_id": "5322c157448ab9842a000028",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0909228822",
+	"longitude": "-118.337729103"
+}, {
+	"_id": "5322c157448ab9842a000029",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.962852",
+	"longitude": "-118.308637"
+}, {
+	"_id": "5322c157448ab9842a00002a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.10885",
+	"longitude": "-118.2234229"
+}, {
+	"_id": "5322c157448ab9842a00002b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0623069",
+	"longitude": "-118.197606"
+}, {
+	"_id": "5322c157448ab9842a00002c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0591241",
+	"longitude": "-118.3913004"
+}, {
+	"_id": "5322c157448ab9842a00002d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.146274",
+	"longitude": "-118.1197411"
+}, {
+	"_id": "5322c157448ab9842a00002e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0428136",
+	"longitude": "-118.2508238"
+}, {
+	"_id": "5322c157448ab9842a00002f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1942967208",
+	"longitude": "-118.41331656"
+}, {
+	"_id": "5322c157448ab9842a000030",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0449605",
+	"longitude": "-118.2493695"
+}, {
+	"_id": "5322c157448ab9842a000031",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.04622292",
+	"longitude": "-118.345799446"
+}, {
+	"_id": "5322c157448ab9842a000032",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0835566",
+	"longitude": "-118.3420074"
+}, {
+	"_id": "5322c157448ab9842a000033",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.139048",
+	"longitude": "-118.204162"
+}, {
+	"_id": "5322c157448ab9842a000034",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9811784",
+	"longitude": "-118.202371"
+}, {
+	"_id": "5322c157448ab9842a000035",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1349223",
+	"longitude": "-118.3616805"
+}, {
+	"_id": "5322c157448ab9842a000036",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.044758",
+	"longitude": "-118.466188"
+}, {
+	"_id": "5322c157448ab9842a000037",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0905094",
+	"longitude": "-118.3828495"
+}, {
+	"_id": "5322c157448ab9842a000038",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1563052",
+	"longitude": "-118.3692107"
+}, {
+	"_id": "5322c157448ab9842a000039",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.047539",
+	"longitude": "-118.239114"
+}, {
+	"_id": "5322c157448ab9842a00003a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0784173",
+	"longitude": "-118.1255945"
+}, {
+	"_id": "5322c157448ab9842a00003b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.014345",
+	"longitude": "-118.282352"
+}, {
+	"_id": "5322c157448ab9842a00003c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.017985",
+	"longitude": "-118.492999"
+}, {
+	"_id": "5322c157448ab9842a00003d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.2080962",
+	"longitude": "-118.3882612"
+}, {
+	"_id": "5322c157448ab9842a00003e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.2084759",
+	"longitude": "-118.3880832"
+}, {
+	"_id": "5322c157448ab9842a00003f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0251409",
+	"longitude": "-118.4122279"
+}, {
+	"_id": "5322c157448ab9842a000040",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1580401",
+	"longitude": "-118.2635308"
+}, {
+	"_id": "5322c157448ab9842a000041",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.018666",
+	"longitude": "-118.281577"
+}, {
+	"_id": "5322c157448ab9842a000042",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0564805",
+	"longitude": "-118.2914799"
+}, {
+	"_id": "5322c157448ab9842a000043",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0287342",
+	"longitude": "-118.4114555"
+}, {
+	"_id": "5322c157448ab9842a000044",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1496377",
+	"longitude": "-118.3430468"
+}, {
+	"_id": "5322c157448ab9842a000045",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.962468",
+	"longitude": "-118.147763"
+}, {
+	"_id": "5322c157448ab9842a000046",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.060685",
+	"longitude": "-118.306212"
+}, {
+	"_id": "5322c157448ab9842a000047",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9690889",
+	"longitude": "-118.210357"
+}, {
+	"_id": "5322c157448ab9842a000048",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1863943",
+	"longitude": "-118.431268"
+}, {
+	"_id": "5322c157448ab9842a000049",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.2007540021",
+	"longitude": "-118.44850313"
+}, {
+	"_id": "5322c157448ab9842a00004a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9456374",
+	"longitude": "-118.3558343"
+}, {
+	"_id": "5322c157448ab9842a00004b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0097852",
+	"longitude": "-118.4801948"
+}, {
+	"_id": "5322c157448ab9842a00004c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0905094",
+	"longitude": "-118.3828495"
+}, {
+	"_id": "5322c157448ab9842a00004d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1851363",
+	"longitude": "-118.3085352"
+}, {
+	"_id": "5322c157448ab9842a00004e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.032645",
+	"longitude": "-118.211276"
+}, {
+	"_id": "5322c157448ab9842a00004f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.2017543",
+	"longitude": "-118.4046842"
+}, {
+	"_id": "5322c157448ab9842a000050",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0834861",
+	"longitude": "-118.3127613"
+}, {
+	"_id": "5322c157448ab9842a000051",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1513081",
+	"longitude": "-118.2367814"
+}, {
+	"_id": "5322c157448ab9842a000052",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0905806837",
+	"longitude": "-118.391311169"
+}, {
+	"_id": "5322c157448ab9842a000053",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.17462",
+	"longitude": "-118.3266906"
+}, {
+	"_id": "5322c157448ab9842a000054",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0474765",
+	"longitude": "-118.2939175"
+}, {
+	"_id": "5322c157448ab9842a000055",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0402664",
+	"longitude": "-118.1930789"
+}, {
+	"_id": "5322c157448ab9842a000056",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1942967208",
+	"longitude": "-118.41331656"
+}, {
+	"_id": "5322c157448ab9842a000057",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0586300906",
+	"longitude": "-118.345892605"
+}, {
+	"_id": "5322c157448ab9842a000058",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.161587",
+	"longitude": "-118.300858"
+}, {
+	"_id": "5322c157448ab9842a000059",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0467247",
+	"longitude": "-118.4645004"
+}, {
+	"_id": "5322c157448ab9842a00005a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0274642953",
+	"longitude": "-118.474638428"
+}, {
+	"_id": "5322c157448ab9842a00005b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1432245",
+	"longitude": "-118.391394"
+}, {
+	"_id": "5322c157448ab9842a00005c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.906966786",
+	"longitude": "-118.390227556"
+}, {
+	"_id": "5322c157448ab9842a00005d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.041641",
+	"longitude": "-118.141306"
+}, {
+	"_id": "5322c157448ab9842a00005e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1004443728",
+	"longitude": "-118.329703643"
+}, {
+	"_id": "5322c157448ab9842a00005f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.040317",
+	"longitude": "-118.16796"
+}, {
+	"_id": "5322c157448ab9842a000060",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1060468",
+	"longitude": "-118.1343734"
+}, {
+	"_id": "5322c157448ab9842a000061",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0398002",
+	"longitude": "-118.3096102"
+}, {
+	"_id": "5322c157448ab9842a000062",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.098455",
+	"longitude": "-118.305987"
+}, {
+	"_id": "5322c157448ab9842a000063",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0560455322",
+	"longitude": "-118.309822083"
+}, {
+	"_id": "5322c157448ab9842a000064",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0244069",
+	"longitude": "-118.4913"
+}, {
+	"_id": "5322c157448ab9842a000065",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0660799",
+	"longitude": "-118.3989213"
+}, {
+	"_id": "5322c157448ab9842a000066",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9426116943",
+	"longitude": "-118.130935669"
+}, {
+	"_id": "5322c157448ab9842a000067",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1601906345",
+	"longitude": "-118.510322234"
+}, {
+	"_id": "5322c157448ab9842a000068",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.152517",
+	"longitude": "-118.350207"
+}, {
+	"_id": "5322c157448ab9842a000069",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9975444",
+	"longitude": "-118.4750532"
+}, {
+	"_id": "5322c157448ab9842a00006a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1659094",
+	"longitude": "-118.2831908"
+}, {
+	"_id": "5322c157448ab9842a00006b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1446723",
+	"longitude": "-118.148375"
+}, {
+	"_id": "5322c157448ab9842a00006c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.151986",
+	"longitude": "-118.3513847"
+}, {
+	"_id": "5322c157448ab9842a00006d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.063757",
+	"longitude": "-118.295838"
+}, {
+	"_id": "5322c157448ab9842a00006e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.141379",
+	"longitude": "-118.131536"
+}, {
+	"_id": "5322c157448ab9842a00006f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0215312",
+	"longitude": "-118.214019"
+}, {
+	"_id": "5322c157448ab9842a000070",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0975665",
+	"longitude": "-118.3651669"
+}, {
+	"_id": "5322c157448ab9842a000071",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0762945",
+	"longitude": "-118.3491082"
+}, {
+	"_id": "5322c157448ab9842a000072",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0346054",
+	"longitude": "-118.2322826"
+}, {
+	"_id": "5322c157448ab9842a000073",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0981492",
+	"longitude": "-118.3501071"
+}, {
+	"_id": "5322c157448ab9842a000074",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.146591",
+	"longitude": "-118.253358"
+}, {
+	"_id": "5322c157448ab9842a000075",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.045543",
+	"longitude": "-118.452894"
+}, {
+	"_id": "5322c157448ab9842a000076",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.137118929",
+	"longitude": "-118.150149733"
+}, {
+	"_id": "5322c157448ab9842a000077",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0491055",
+	"longitude": "-118.260503"
+}, {
+	"_id": "5322c157448ab9842a000078",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9292549",
+	"longitude": "-118.2522808"
+}, {
+	"_id": "5322c157448ab9842a000079",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0677624",
+	"longitude": "-118.3835675"
+}, {
+	"_id": "5322c157448ab9842a00007a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.10885",
+	"longitude": "-118.2234229"
+}, {
+	"_id": "5322c157448ab9842a00007b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1500009",
+	"longitude": "-118.3655793"
+}, {
+	"_id": "5322c157448ab9842a00007c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0513704935",
+	"longitude": "-118.255409002"
+}, {
+	"_id": "5322c157448ab9842a00007d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0549945",
+	"longitude": "-118.3840695"
+}, {
+	"_id": "5322c157448ab9842a00007e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.034",
+	"longitude": "-118.229174"
+}, {
+	"_id": "5322c157448ab9842a00007f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0717066018",
+	"longitude": "-118.361560106"
+}, {
+	"_id": "5322c157448ab9842a000080",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0682870338",
+	"longitude": "-118.442599317"
+}, {
+	"_id": "5322c157448ab9842a000081",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1797479",
+	"longitude": "-118.396425"
+}, {
+	"_id": "5322c157448ab9842a000082",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.223975",
+	"longitude": "-118.361426"
+}, {
+	"_id": "5322c157448ab9842a000083",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1584521",
+	"longitude": "-118.1320583"
+}, {
+	"_id": "5322c157448ab9842a000084",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.068548",
+	"longitude": "-118.376666"
+}, {
+	"_id": "5322c157448ab9842a000085",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0591241",
+	"longitude": "-118.3913004"
+}, {
+	"_id": "5322c157448ab9842a000086",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.146274",
+	"longitude": "-118.1197411"
+}, {
+	"_id": "5322c157448ab9842a000087",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0836820675",
+	"longitude": "-118.350585304"
+}, {
+	"_id": "5322c157448ab9842a000088",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0475625",
+	"longitude": "-118.2391303"
+}, {
+	"_id": "5322c157448ab9842a000089",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.02508",
+	"longitude": "-118.393969"
+}, {
+	"_id": "5322c157448ab9842a00008a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9884429",
+	"longitude": "-118.3538087"
+}, {
+	"_id": "5322c158448ab9842a00008b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0251409",
+	"longitude": "-118.4122279"
+}, {
+	"_id": "5322c158448ab9842a00008c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0783774659",
+	"longitude": "-118.264029968"
+}, {
+	"_id": "5322c158448ab9842a00008d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0957865106",
+	"longitude": "-118.284978083"
+}, {
+	"_id": "5322c158448ab9842a00008e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9394729",
+	"longitude": "-118.3613174"
+}, {
+	"_id": "5322c158448ab9842a00008f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1568573",
+	"longitude": "-118.4841868"
+}, {
+	"_id": "5322c158448ab9842a000090",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.186292",
+	"longitude": "-118.414541"
+}, {
+	"_id": "5322c158448ab9842a000091",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0834879",
+	"longitude": "-118.3518564"
+}, {
+	"_id": "5322c158448ab9842a000092",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0476469",
+	"longitude": "-118.2095676"
+}, {
+	"_id": "5322c158448ab9842a000093",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0640722451",
+	"longitude": "-118.297691345"
+}, {
+	"_id": "5322c158448ab9842a000094",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0574758",
+	"longitude": "-118.302109"
+}, {
+	"_id": "5322c158448ab9842a000095",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.11772",
+	"longitude": "-118.19201"
+}, {
+	"_id": "5322c158448ab9842a000096",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9446506",
+	"longitude": "-118.2096463"
+}, {
+	"_id": "5322c158448ab9842a000097",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9633442",
+	"longitude": "-118.3519073"
+}, {
+	"_id": "5322c158448ab9842a000098",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1409214",
+	"longitude": "-118.2585636"
+}, {
+	"_id": "5322c158448ab9842a000099",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1736481",
+	"longitude": "-118.2984531"
+}, {
+	"_id": "5322c158448ab9842a00009a",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0550494",
+	"longitude": "-118.3440392"
+}, {
+	"_id": "5322c158448ab9842a00009b",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1451167",
+	"longitude": "-118.1486989"
+}, {
+	"_id": "5322c158448ab9842a00009c",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0979189878",
+	"longitude": "-118.318468486"
+}, {
+	"_id": "5322c158448ab9842a00009d",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0456100796",
+	"longitude": "-118.253746033"
+}, {
+	"_id": "5322c158448ab9842a00009e",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.020421",
+	"longitude": "-118.452514"
+}, {
+	"_id": "5322c158448ab9842a00009f",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1873518",
+	"longitude": "-118.4137015"
+}, {
+	"_id": "5322c158448ab9842a0000a0",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1563052",
+	"longitude": "-118.3692107"
+}, {
+	"_id": "5322c158448ab9842a0000a1",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.150144",
+	"longitude": "-118.442325"
+}, {
+	"_id": "5322c158448ab9842a0000a2",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1089675",
+	"longitude": "-118.2871909"
+}, {
+	"_id": "5322c158448ab9842a0000a3",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0682181",
+	"longitude": "-118.3983209"
+}, {
+	"_id": "5322c158448ab9842a0000a4",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1617412",
+	"longitude": "-118.5158511"
+}, {
+	"_id": "5322c158448ab9842a0000a5",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.115335",
+	"longitude": "-118.183376"
+}, {
+	"_id": "5322c158448ab9842a0000a6",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0256823",
+	"longitude": "-118.3365564"
+}, {
+	"_id": "5322c158448ab9842a0000a7",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9030334",
+	"longitude": "-118.3528829"
+}, {
+	"_id": "5322c158448ab9842a0000a8",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.055141",
+	"longitude": "-118.30819"
+}, {
+	"_id": "5322c158448ab9842a0000a9",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0342569",
+	"longitude": "-118.283559"
+}, {
+	"_id": "5322c158448ab9842a0000aa",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1393339",
+	"longitude": "-118.2085061"
+}, {
+	"_id": "5322c158448ab9842a0000ab",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0173639",
+	"longitude": "-118.2780569"
+}, {
+	"_id": "5322c158448ab9842a0000ac",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.997084",
+	"longitude": "-118.478905"
+}, {
+	"_id": "5322c158448ab9842a0000ad",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0889716",
+	"longitude": "-118.3769065"
+}, {
+	"_id": "5322c158448ab9842a0000ae",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0326129",
+	"longitude": "-118.3417432"
+}, {
+	"_id": "5322c158448ab9842a0000af",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9019377",
+	"longitude": "-118.3181536"
+}, {
+	"_id": "5322c158448ab9842a0000b0",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1116487",
+	"longitude": "-118.2360554"
+}, {
+	"_id": "5322c158448ab9842a0000b1",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1018537",
+	"longitude": "-118.3126123"
+}, {
+	"_id": "5322c158448ab9842a0000b2",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.043925",
+	"longitude": "-118.2424291"
+}, {
+	"_id": "5322c158448ab9842a0000b3",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0023057",
+	"longitude": "-118.2650867"
+}, {
+	"_id": "5322c158448ab9842a0000b4",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9772261",
+	"longitude": "-118.3767735"
+}, {
+	"_id": "5322c158448ab9842a0000b5",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.176948",
+	"longitude": "-118.317773"
+}, {
+	"_id": "5322c158448ab9842a0000b6",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0838236",
+	"longitude": "-118.2871728"
+}, {
+	"_id": "5322c158448ab9842a0000b7",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0230958",
+	"longitude": "-118.1708107"
+}, {
+	"_id": "5322c158448ab9842a0000b8",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.076337",
+	"longitude": "-118.309185"
+}, {
+	"_id": "5322c158448ab9842a0000b9",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1865068",
+	"longitude": "-118.3890798"
+}, {
+	"_id": "5322c158448ab9842a0000ba",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.009746",
+	"longitude": "-118.4659576"
+}, {
+	"_id": "5322c158448ab9842a0000bb",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.130918",
+	"longitude": "-118.257379"
+}, {
+	"_id": "5322c158448ab9842a0000bc",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1496377",
+	"longitude": "-118.3430468"
+}, {
+	"_id": "5322c158448ab9842a0000bd",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.047437",
+	"longitude": "-118.434359"
+}, {
+	"_id": "5322c158448ab9842a0000be",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0775019",
+	"longitude": "-118.3767703"
+}, {
+	"_id": "5322c158448ab9842a0000bf",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.083525",
+	"longitude": "-118.363209"
+}, {
+	"_id": "5322c158448ab9842a0000c0",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "33.9762855538",
+	"longitude": "-118.363437653"
+}, {
+	"_id": "5322c158448ab9842a0000c1",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.073679",
+	"longitude": "-118.360906"
+}, {
+	"_id": "5322c158448ab9842a0000c2",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0454234",
+	"longitude": "-118.2382959"
+}, {
+	"_id": "5322c158448ab9842a0000c3",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0870231",
+	"longitude": "-118.3802894"
+}, {
+	"_id": "5322c158448ab9842a0000c4",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0611988",
+	"longitude": "-118.3989438"
+}, {
+	"_id": "5322c158448ab9842a0000c5",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0959268",
+	"longitude": "-118.2921271"
+}, {
+	"_id": "5322c158448ab9842a0000c6",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0127919",
+	"longitude": "-118.4667729"
+}, {
+	"_id": "5322c158448ab9842a0000c7",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0765867",
+	"longitude": "-118.2574454"
+}, {
+	"_id": "5322c158448ab9842a0000c8",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0287342",
+	"longitude": "-118.4114555"
+}, {
+	"_id": "5322c158448ab9842a0000c9",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0618362",
+	"longitude": "-118.3110776"
+}, {
+	"_id": "5322c158448ab9842a0000ca",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.098455",
+	"longitude": "-118.305987"
+}, {
+	"_id": "5322c158448ab9842a0000cb",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.014345",
+	"longitude": "-118.282352"
+}, {
+	"_id": "5322c158448ab9842a0000cc",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1391818",
+	"longitude": "-118.2046106"
+}, {
+	"_id": "5322c158448ab9842a0000cd",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.018666",
+	"longitude": "-118.281577"
+}, {
+	"_id": "5322c158448ab9842a0000ce",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.2166552041",
+	"longitude": "-118.226677179"
+}, {
+	"_id": "5322c158448ab9842a0000cf",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0037326",
+	"longitude": "-118.485488"
+}, {
+	"_id": "5322c158448ab9842a0000d0",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.051298",
+	"longitude": "-118.255131"
+}, {
+	"_id": "5322c158448ab9842a0000d1",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.068077",
+	"longitude": "-118.404192"
+}, {
+	"_id": "5322c158448ab9842a0000d2",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0402664",
+	"longitude": "-118.1930789"
+}, {
+	"_id": "5322c158448ab9842a0000d3",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0991726",
+	"longitude": "-118.2594074"
+}, {
+	"_id": "5322c158448ab9842a0000d4",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1580824",
+	"longitude": "-118.3964804"
+}, {
+	"_id": "5322c158448ab9842a0000d5",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0265655389",
+	"longitude": "-118.486993825"
+}, {
+	"_id": "5322c158448ab9842a0000d6",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.139048",
+	"longitude": "-118.204162"
+}, {
+	"_id": "5322c158448ab9842a0000d7",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.019966",
+	"longitude": "-118.154411"
+}, {
+	"_id": "5322c158448ab9842a0000d8",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0413069",
+	"longitude": "-118.2516763"
+}, {
+	"_id": "5322c158448ab9842a0000d9",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0635721",
+	"longitude": "-118.3005408"
+}, {
+	"_id": "5322c158448ab9842a0000da",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1797243",
+	"longitude": "-118.4050372"
+}, {
+	"_id": "5322c158448ab9842a0000db",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.114620383",
+	"longitude": "-118.235002756"
+}, {
+	"_id": "5322c158448ab9842a0000dc",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1618757",
+	"longitude": "-118.1319962"
+}, {
+	"_id": "5322c158448ab9842a0000dd",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0456616",
+	"longitude": "-118.2362086"
+}, {
+	"_id": "5322c158448ab9842a0000de",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1793949",
+	"longitude": "-118.4544907"
+}, {
+	"_id": "5322c158448ab9842a0000df",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0725530931",
+	"longitude": "-118.292156607"
+}, {
+	"_id": "5322c158448ab9842a0000e0",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.1105506",
+	"longitude": "-118.2873162"
+}, {
+	"_id": "5322c158448ab9842a0000e1",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0957865106",
+	"longitude": "-118.284978083"
+}, {
+	"_id": "5322c158448ab9842a0000e2",
+	"type": 1,
+	"city_name": "洛杉矶",
+	"latitude": "34.0796663",
+	"longitude": "-118.2183423"
+}];

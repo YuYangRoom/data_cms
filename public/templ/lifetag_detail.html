@@ -1,0 +1,25 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>基本信息</legend>
+    <div class="control-group">
+        <label class="control-label" for="lifetag-property-type">类型</label>
+        <div class="controls">
+            <select id="lifetag-property-type">餐馆 | 购物 | 娱乐
+                <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>餐馆</option>
+                <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>购物</option>
+                <option value="3" {{#ifCond type '3'}}selected{{/ifCond}}>娱乐</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="lifetag-name">标签名称</label>
+            <div class="controls">
+                <input type="text" id="lifetag-name" placeholder="必填" value="{{name}}">
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

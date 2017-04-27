@@ -1,0 +1,200 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>添加城市</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+        <fieldset>
+
+            <div class="control-group">
+                <label class="control-label" for="continents">大洲</label>
+                <div class="controls">
+                <select id="continents" name="continents">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="country">国家</label>
+                <div class="controls">
+                    <select id="country" name="country" >
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="cityname">城市名</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="cityname" name="cityname" type="text"><span class="help-inline">不能为空</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="timezone">TimeZone</label>
+                <div class="controls">
+                    dstOffset: <input class="input-xlarge focused" id="dstOffset" style="width:100px" name="dstOffset" type="text" >
+                    rawOffset:  <input class="input-xlarge focused" id="rawOffset" style="width:100px" name="rawOffset" type="text"><span class="help-inline" style="color: red">必填项</span>
+                    <br>
+                    <font color="red"> 当地时区是世界西区时dstOffset=3600、当地时区是世界东区时dstOffset=0</font>
+                    <br>
+                    <font color="red">  如：香港是东八区，rawOffset=8*3600=28800；纽约是西五区：rawOffset=-5*3600=-18000</font>
+                    <br>
+                    <font color="red"> 自己上网查找此城市属于世界哪个区</font>
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label" for="timezone">En_info</label>
+                <div class="controls">
+                    Continents: <input class="input-xlarge focused" id="update_continents" style="width:100px" name="continents" type="text" >
+                    Countryname:  <input class="input-xlarge focused" id="update_countryname" style="width:100px" name="countryname" type="text" ><span class="help-inline" style="color: red">必填项</span>
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label" for="city_rank">城市排名</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="city_rank" name="city_rank" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="cityname_en">城市名(英文)</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="cityname_en" name="cityname_en" type="text"><span class="help-inline">不能为空</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="cityname_py">城市名(拼音)</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="cityname_py" name="cityname_py" type="text"><span class="help-inline">不能为空</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="short_introduce">一句话简介</label>
+                <div class="controls">
+                    <textarea id="short_introduce" style="width:80%;height:60px"></textarea>
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label" for="attraction_overview">Attractions Overview</label>
+                <div class="controls">
+                    <textarea id="attraction_overview" style="width:80%;height:60px"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="restaurant_overview">Restaurants Overview</label>
+                <div class="controls">
+                    <textarea id="restaurant_overview" style="width:80%;height:60px"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="shopping_overview">Shoppings Overview</label>
+                <div class="controls">
+                    <textarea id="shopping_overview" style="width:80%;height:60px"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="tips">简介</label>
+                <input type="button" value="增加条目" id="addIntr">
+                <div class="controls intr-control">
+                    <input class="input-xlarge focused intrItemTitle"  name="intrItemTitle" data-value="" type="text">
+                    <textarea class="intrItemContent" id="intrItemContent" style="width:80%;height:50px"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="tips">小贴士</label>
+                <input type="button" value="增加条目" id="addTip">
+                <div class="controls tip-control">
+                    <input class="input-xlarge focused tipItemTitle"  name="tipItemTitle" data-value="" type="text">
+                    <textarea class="tipItemContent" id="tipItemContent" style="width:80%;height:50px"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="traffic">小贴士</label>
+                <input type="button" value="增加条目" id="addTra">
+                <div class="controls tra-control">
+                    <input class="input-xlarge focused traItemTitle"  name="traItemTitle" data-value="" type="text">
+                    <textarea class="traItemContent" id="traItemContent" style="width:80%;height:50px"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_day">推荐天数</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="recommand_day" name="recommand_day" type="number" min="0">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_intensity">推荐强度</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="recommand_intensity" name="recommand_intensity" type="number" min="0">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_center">推荐出发点</label>
+                <div class="controls">
+                    名称：
+                    <input class="input-xlarge focused" id="recommand_center_name" name="recommand_center_name" type="text" >
+                    纬度：
+                     <input class="input-xlarge focused" id="recommand_center_latitude" name="recommand_center_latitude" type="text">
+                    经度：
+                      <input class="input-xlarge focused" id="recommand_center_longitude" name="recommand_center_longitude" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="hot_flag">热门城市</label>
+                <div class="controls">
+                    <input type="radio" name="hot_flag" value = "1" >是<br>
+                    <input type="radio" name="hot_flag" value = "0" >不是<br>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="show_flag">是否显示</label>
+                <div class="controls">
+                    <input type="radio" name="show_flag" value = "1" >是<br>
+                    <input type="radio" name="show_flag" value = "0" >不是<br>
+                </div>
+            </div>
+            <div class="control-group label-group">
+                <label class="control-label" for="masterLabel">主标签</label>
+                <div class="controls">
+                    <input class="input-xlarge focused"  name="labels" data-value="" type="text" id="masterLabel">
+                    <input type="button" value="增加标签" id="addlabel">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="latitude">纬度</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="latitude" name="latitude" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="longitude">经度</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="longitude" name="longitude" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="weoid">城市WeoId</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="weoid" name="weoid" type="text">
+                </div>
+            </div>
+
+            <div class="control-group operate-group">
+                <input type="button" class="btn btn-primary" id="save" value="保存"></button>
+                <button class="btn" id="cancel">取消</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="map_canvas" style="height:400px"></div>
+</div>

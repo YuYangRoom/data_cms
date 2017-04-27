@@ -1,0 +1,71 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>人物档案信息</legend>
+    <div class="control-group">
+        <label class="control-label" for="people-property-type">人物类别</label>
+        <div class="controls">
+            <select id="people-property-type">名人 |歌星 | 舞者
+                <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>名人</option>
+                <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>歌星</option>
+                <option value="3" {{#ifCond type '3'}}selected{{/ifCond}}>舞者</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="people-city_name">城市</label>
+            <div class="controls">
+                <input type="text" id="people-city_name"  value="{{city_name.name}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="people-title"> 姓名</label>
+            <div class="controls">
+                <input type="text" id="people-title"  value="{{username}}">
+
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="people-job_desc">职业描述</label>
+            <div class="controls">
+                <textarea   id="people-job_desc" placeholder="不超过15个字" cols="10">{{job_desc}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="people-short_introduce">一句话描述</label>
+            <div class="controls">
+                <textarea   id="people-short_introduce" placeholder="不超过50字" cols="10">{{short_introduce}}</textarea>
+            </div>
+        </div>
+<!--        <div class="control-group peoples-group">
+            <label class="control-label">人物简介</label>
+            <div class="controls">
+                <input type="button"  value="新增人物简介"   id="addPeople">
+            </div>
+        </div>
+        {{#if simple_introduce}}
+        {{#each simple_introduce}}
+        <label class="control-label">原人物简介:</label>
+        <div class="control-group peoples-group">
+           <div class="controls">
+                标题:<input class="input-xlarge focused peoples" name="title" style="width:8%"  placeholder="不超过15字" type="text" value="{{title}}" >
+                描述:<textarea class="input-xlarge focused peoples" name="desc" style="width:20%">{{desc}}</textarea>
+                图片序号: <input class="input-xlarge focused peoples" name="image_order" style="width:5%"     type="text" value="{{image_order}}" >
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        {{#if images}}
+        {{#each images}}
+        <div  class="image-group">
+        <input type="hidden" id="people-imageId"  name="imageId" value="{{imageId}}">
+        <input type="hidden" id="people-order" name="order"  value="{{order}}">
+        </div>
+        {{/each}}
+        {{/if}}-->
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

@@ -1,0 +1,120 @@
+<form class="form-horizontal">
+
+    <fieldset>
+        <legend>活动信息</legend>
+    <div class="control-group">
+        <label class="control-label" for="activity-property-type">活动类别</label>
+        <div class="controls">
+            <select id="activity-property-type">景点 | 购物 | 娱乐
+                <option value="1" {{#ifCond type '1'}}selected{{/ifCond}}>景点</option>
+                <option value="2" {{#ifCond type '2'}}selected{{/ifCond}}>购物</option>
+                <option value="3" {{#ifCond type '3'}}selected{{/ifCond}}>娱乐</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-title"> 活动名称</label>
+            <div class="controls">
+                <input type="text" id="activity-title" placeholder="必填" value="{{title}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="cityname" readonly placeholder="必填" value="{{activity_city.cityname}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{pgc_city._id}}'>{{activity_city.cityname}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-price"> 活动价格</label>
+            <div class="controls">
+                <input type="text" id="activity-price" value="{{price}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-atype"> 活动类型</label>
+            <div class="controls">
+                <input type="text" id="activity-atype" value="{{atype}}"><font color="red">参考类型如：户外活动、演唱会等</font>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-address"> 活动地点</label>
+            <div class="controls">
+                <input type="text" id="activity-address" value="{{address}}"><font color="red">举办活动的建筑物、房间号</font>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-deaddress"> 活动详细地址</label>
+            <div class="controls">
+                <input type="text" id="activity-deaddress" value="{{deaddress}}" style="width: 500px"><font color="red">格式：门牌号、街道、城市、国家</font>
+            </div>
+        </div>
+          <div class="control-group">
+            <label class="control-label" for="activity-open_time">活动开始日期</label>
+            <div class="controls">
+               <!-- <textarea   id="activity-open_time" cols="10">{{open_time}}</textarea>-->
+                <input type="text" id="activity-open_time" placeholder="点击此处添加时间" value="{{open_time}}"  onfocus="setday(this)"  readonly="readonly" >
+              <!--  <font color="red">&nbsp;注意：&nbsp;日期格式如下：2015-01-01 写成&nbsp;20150101 </font>-->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-close_time">活动结束日期</label>
+            <div class="controls">
+                <!--<textarea   id="activity-close_time" cols="10">{{close_time}}</textarea>-->
+                <input type="text" id="activity-close_time" placeholder="点击此处添加时间" value="{{close_time}}"  onfocus="setday(this)"  readonly="readonly">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-acttime"> 活动时间</label>
+            <div class="controls">
+                <input type="text" id="activity-acttime" value="{{acttime}}"><font color="red">具体的活动时间、格式：10：30-15：30</font>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="activity-desc">活动描述</label>
+            <div class="controls">
+                <textarea   id="activity-desc" cols="10">{{desc}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-acturl"> 活动URL</label>
+            <div class="controls">
+                <input type="text" id="activity-acturl" value="{{acturl}}" style="width: 500px"><font color="red">城市活动必填</font>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-order_url"> 订票URL</label>
+            <div class="controls">
+                <input type="text" id="activity-order_url" value="{{order_url}}" style="width: 500px">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-longitude"> 经度</label>
+            <div class="controls">
+                <input type="text" id="activity-longitude" placeholder="可以不填"  value="{{longitude}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="activity-latitude">纬度</label>
+            <div class="controls">
+                <input type="text" id="activity-latitude" placeholder="可以不填" value="{{latitude}}">
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

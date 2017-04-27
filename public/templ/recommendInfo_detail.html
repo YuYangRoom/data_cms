@@ -1,0 +1,184 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>动态推送信息</legend>
+    <div class="control-group">
+        <label class="control-label" for="recommendInfo-property-type">推送类型</label>
+        <div class="controls">
+            <select id="recommendInfo-property-type">
+                <option value="0" {{#ifCond type '0'}} selected {{/ifCond}}>景点POI</option>
+                <option value="1" {{#ifCond type '1'}} selected {{/ifCond}}>餐厅POI</option>
+                <option value="2" {{#ifCond type '2'}} selected {{/ifCond}}>商场POI</option>
+                <option value="3" {{#ifCond type '3'}} selected {{/ifCond}}>商圈POI</option>
+                <option value="4" {{#ifCond type '4'}} selected {{/ifCond}}>活动</option>
+                <option value="5" {{#ifCond type '5'}} selected {{/ifCond}}>PGC</option>
+                <option value="6" {{#ifCond type '6'}} selected {{/ifCond}}>新闻</option>
+                <option value="7" {{#ifCond type '7'}} selected {{/ifCond}}>城市简介</option>
+            </select>
+        </div>
+    </div>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="city" readonly placeholder="必填" value="{{city_name}}"
+                   style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city_id}}'>{{city_name}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommend_start_date_1"> 推送开始日期</label>
+            <div class="controls">
+                <input type="text" id="recommend_start_date_1" placeholder="点击此处添加时间" value="{{recommend_start_date_1}}"  onfocus="setday(this)"  readonly="readonly" >
+             <!--   <input type="text" id="recommend_start_date"   value="{{recommend_start_date}}">-->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommend_end_date_1"> 推送结束日期</label>
+            <div class="controls">
+               <!-- <input type="text" id="recommend_end_date"  value="{{recommend_end_date}}">-->
+                <input type="text" id="recommend_end_date_1" placeholder="点击此处添加时间" value="{{recommend_end_date_1}}"  onfocus="setday(this)"  readonly="readonly" >
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommend_start_time"> 推送开始时间</label>
+            <div class="controls">
+                <select  id="recommend_start_time">
+                <option value="00" {{#ifCond recommend_start_time '00'}} selected {{/ifCond}}>00</option>
+                <option value="01" {{#ifCond recommend_start_time '01'}} selected {{/ifCond}}>01</option>
+                <option value="02" {{#ifCond recommend_start_time '02'}} selected {{/ifCond}}>02</option>
+                <option value="03" {{#ifCond recommend_start_time '03'}} selected {{/ifCond}}>03</option>
+                <option value="04" {{#ifCond recommend_start_time '04'}} selected {{/ifCond}}>04</option>
+                <option value="05" {{#ifCond recommend_start_time '05'}} selected {{/ifCond}}>05</option>
+                <option value="06" {{#ifCond recommend_start_time '06'}} selected {{/ifCond}}>06</option>
+                <option value="07" {{#ifCond recommend_start_time '07'}} selected {{/ifCond}}>07</option>
+                <option value="08" {{#ifCond recommend_start_time '08'}} selected {{/ifCond}}>08</option>
+                <option value="09" {{#ifCond recommend_start_time '09'}} selected {{/ifCond}}>09</option>
+                <option value="10" {{#ifCond recommend_start_time '10'}} selected {{/ifCond}}>10</option>
+                <option value="11" {{#ifCond recommend_start_time '11'}} selected {{/ifCond}}>11</option>
+                <option value="12" {{#ifCond recommend_start_time '12'}} selected {{/ifCond}}>12</option>
+                <option value="13" {{#ifCond recommend_start_time '13'}} selected {{/ifCond}}>13</option>
+                <option value="14" {{#ifCond recommend_start_time '14'}} selected {{/ifCond}}>14</option>
+                <option value="15" {{#ifCond recommend_start_time '15'}} selected {{/ifCond}}>15</option>
+                <option value="16" {{#ifCond recommend_start_time '16'}} selected {{/ifCond}}>16</option>
+                <option value="17" {{#ifCond recommend_start_time '17'}} selected {{/ifCond}}>17</option>
+                <option value="18" {{#ifCond recommend_start_time '18'}} selected {{/ifCond}}>18</option>
+                <option value="19" {{#ifCond recommend_start_time '19'}} selected {{/ifCond}}>19</option>
+                <option value="20" {{#ifCond recommend_start_time '20'}} selected {{/ifCond}}>20</option>
+                <option value="21" {{#ifCond recommend_start_time '21'}} selected {{/ifCond}}>21</option>
+                <option value="22" {{#ifCond recommend_start_time '22'}} selected {{/ifCond}}>22</option>
+                <option value="23" {{#ifCond recommend_start_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+             <!--   <input type="text" id="recommend_start_date"   value="{{recommend_start_date}}">-->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommend_end_time"> 推送结束时间</label>
+            <div class="controls">
+                <select  id="recommend_end_time">
+                    <option value="00" {{#ifCond recommend_end_time '00'}} selected {{/ifCond}}>00</option>
+                    <option value="01" {{#ifCond recommend_end_time '01'}} selected {{/ifCond}}>01</option>
+                    <option value="02" {{#ifCond recommend_end_time '02'}} selected {{/ifCond}}>02</option>
+                    <option value="03" {{#ifCond recommend_end_time '03'}} selected {{/ifCond}}>03</option>
+                    <option value="04" {{#ifCond recommend_end_time '04'}} selected {{/ifCond}}>04</option>
+                    <option value="05" {{#ifCond recommend_end_time '05'}} selected {{/ifCond}}>05</option>
+                    <option value="06" {{#ifCond recommend_end_time '06'}} selected {{/ifCond}}>06</option>
+                    <option value="07" {{#ifCond recommend_end_time '07'}} selected {{/ifCond}}>07</option>
+                    <option value="08" {{#ifCond recommend_end_time '08'}} selected {{/ifCond}}>08</option>
+                    <option value="09" {{#ifCond recommend_end_time '09'}} selected {{/ifCond}}>09</option>
+                    <option value="10" {{#ifCond recommend_end_time '10'}} selected {{/ifCond}}>10</option>
+                    <option value="11" {{#ifCond recommend_end_time '11'}} selected {{/ifCond}}>11</option>
+                    <option value="12" {{#ifCond recommend_end_time '12'}} selected {{/ifCond}}>12</option>
+                    <option value="13" {{#ifCond recommend_end_time '13'}} selected {{/ifCond}}>13</option>
+                    <option value="14" {{#ifCond recommend_end_time '14'}} selected {{/ifCond}}>14</option>
+                    <option value="15" {{#ifCond recommend_end_time '15'}} selected {{/ifCond}}>15</option>
+                    <option value="16" {{#ifCond recommend_end_time '16'}} selected {{/ifCond}}>16</option>
+                    <option value="17" {{#ifCond recommend_end_time '17'}} selected {{/ifCond}}>17</option>
+                    <option value="18" {{#ifCond recommend_end_time '18'}} selected {{/ifCond}}>18</option>
+                    <option value="19" {{#ifCond recommend_end_time '19'}} selected {{/ifCond}}>19</option>
+                    <option value="20" {{#ifCond recommend_end_time '20'}} selected {{/ifCond}}>20</option>
+                    <option value="21" {{#ifCond recommend_end_time '21'}} selected {{/ifCond}}>21</option>
+                    <option value="22" {{#ifCond recommend_end_time '22'}} selected {{/ifCond}}>22</option>
+                    <option value="23" {{#ifCond recommend_end_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" > 中心点经纬度</label>
+            <div class="controls">
+                <!--lat:纬度,lon:经度-->
+                经度: <input type="text" id="recommend_poi_lon"  style="width: inherit;" value="{{recommend_poi_lon}}"><br>
+                纬度: <input type="text" id="recommend_poi_lat" style="width: inherit;" value="{{recommend_poi_lat}}">
+               <!-- <input type="text" id="recommend_poi_position"  value="{{recommend_poi_position}}">-->
+
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="recommend_radius">推送半径</label>
+            <div class="controls">
+                <input type="text" id="recommend_radius"  value="{{recommend_radius}}">千米
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">推送内容</label>
+            <div class="controls">
+                <!--  <input type="text" id="recommendInfo-desc" placeholder="必填" value="{{desc}}">-->
+                <table  border="1"   align="center" style="color: #6c6666">
+                    <tr align="center">
+                        <td >ID</td>
+                        <td>名称</td>
+                        <td >一级标题</td>
+                        <td >二级标题</td>
+                    </tr>
+                    <tr align="center" >
+                        <td><input type="text" id="recommend_content_id"  value="{{recommend_content.recommend_content_id}}"></td>
+                        <td><input type="text" id="recommend_content_title"  value="{{recommend_content.recommend_content_title}}"></td>
+                        <td><input type="text" id="recommend_content_first" value="{{recommend_content.recommend_content_first}}"></td>
+                        <td><input type="text" id="recommend_content_second" value="{{recommend_content.recommend_content_second}}"></td>
+                    </tr>
+                    <tr align="center">
+
+                        <td    colspan="2">推荐描述</td>
+                        <td  >新闻url</td>
+                        <td >背景图片</td>
+
+                    </tr>
+                    <tr>
+
+                        <td align="center"  width="500px" colspan="2"><textarea  id="recommend_content_desc" style="width: 400px" cols="10">{{recommend_content.recommend_content_desc}}</textarea></td>
+                        <td ><input type="text" id="recommend_content_url"  value="{{recommend_content.recommend_content_url}}"></td>
+                        <td><input type="text" id="cover_image" placeholder="通过ID获得"  readonly value="{{recommend_content.cover_image}}"></td>
+
+                    </tr>
+                    {{#ifCond type "6"}}
+                    <tr align="center">
+                        <td colspan="4" >新闻图片上传</td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="4"><button id="recommendInfo-list-item-image" >图片上传</button></td>
+                    </tr>
+                    {{/ifCond}}
+                    </tr>
+                    <tbody>  </tbody>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>
+

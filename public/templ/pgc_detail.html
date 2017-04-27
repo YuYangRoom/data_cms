@@ -1,0 +1,172 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>PGC详细信息</legend>
+
+        <div class="control-group">
+            <label class="control-label" for="pgc-pgc_country">国家</label>
+            <input type="text" id="pgc-pgc_country" placeholder="" value="{{pgc_country}}">&nbsp;&nbsp;&nbsp;
+  <!--          <div class="controls">
+
+                城市&lt;!&ndash;<input type="text" id="pgc-city" placeholder="填写城市POI的ID信息" value="{{pgc_city._id}}">&ndash;&gt;
+                <select id="pgc-property-city_type" for="pgc-property-city_type">
+                    <option value="纽约" {{#ifCond pgc_city.cityname '纽约'}}selected{{/ifCond}}>纽约</option>
+                    <option value="洛杉矶" {{#ifCond pgc_city.cityname '洛杉矶'}}selected{{/ifCond}}>洛杉矶</option>
+                    <option value="波士顿" {{#ifCond pgc_city.cityname '波士顿'}}selected{{/ifCond}}>波士顿</option>
+                    <option value="巴黎" {{#ifCond pgc_city.cityname '巴黎'}}selected{{/ifCond}}>巴黎</option>
+                    <option value="巴塞罗那" {{#ifCond pgc_city.cityname '巴塞罗那'}}selected{{/ifCond}}>巴塞罗那</option>
+                    <option value="苏黎世" {{#ifCond pgc_city.cityname '苏黎世'}}selected{{/ifCond}}>苏黎世</option>
+                    <option value="伦敦" {{#ifCond pgc_city.cityname '伦敦'}}selected{{/ifCond}}>伦敦</option>
+                    <option value="新加坡" {{#ifCond pgc_city.cityname '新加坡'}}selected{{/ifCond}}>新加坡</option>
+                    <option value="旧金山" {{#ifCond pgc_city.cityname '旧金山'}}selected{{/ifCond}}>旧金山</option>
+                 </select>
+
+            </div>-->
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="cityname" readonly placeholder="必填" value="{{pgc_city.cityname}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{pgc_city._id}}'>{{pgc_city.cityname}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="pgc-property-type">PGC类别</label>
+            <div class="controls">
+                <select id="pgc-property-type">品读·人物志 | 解构·城市元素 | 精选·下一站
+                    <option value="1" {{#ifCond type
+                    '1'}}selected{{/ifCond}}>品读·人物志</option>
+                    <option value="2" {{#ifCond type
+                    '2'}}selected{{/ifCond}}>解构·城市元素</option>
+                    <option value="3" {{#ifCond type
+                    '3'}}selected{{/ifCond}}>精选·下一站</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-title">标题</label>
+
+            <div class="controls">
+                <input type="text" id="pgc-title" placeholder="必填" value="{{title}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-pgc_tags">标签</label>
+
+            <div class="controls">
+                <input type="text" id="pgc-pgc_tags" readonly <!--placeholder="text，用分号分隔，每个标签不超过5个字-->" value="{{pgc_tags}}" style="width: 500px">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-introducation">导语</label>
+
+            <div class="controls">
+                <input type="text" id="pgc-introducation" placeholder="不超过50字" style="width: 500px" value="{{introducation}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-content">文章内容</label>
+            <div class="controls">
+
+                <textarea   id="pgc-content" style="width: 500px" >{{content}}</textarea>
+            </div>
+        </div>
+         <div class="control-group">
+            <label class="control-label" for="peopletag">相关人物</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addPeopletagValue" id="addPeopletagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addPeopletag">
+            </div>
+            <div class="controls peopletags">
+                <ul id="peopletag-list">
+
+                    <li><input class="input-xlarge focused peopletags" readonly style="width:100px" name="peopletags" placeholder="无(先删除）"
+                     type="text" value="{{pgc_people.name}}" data-value="{{pgc_people._id}}"data-value2="{{pgc_people.name}}"> <input type="button" value="删除"  class="del">
+                    </li>
+
+                    <ul>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-c_start_time">活动开始日期</label>
+            <div class="controls">
+
+                <input type="text" id="pgc-c_start_time" placeholder="点击此处添加时间" value="{{c_start_time}}"  onfocus="setday(this)"  readonly="readonly" >
+
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="pgc-c_end_time">活动结束日期</label>
+            <div class="controls">
+                <input type="text" id="pgc-c_end_time" placeholder="点击此处添加时间" value="{{c_end_time}}"  onfocus="setday(this)"  readonly="c_end_time">
+            </div>
+        </div>
+        <hr style="height:1px;border:none;border-top:1px solid #555555;">
+        <div class="control-group" >
+            <label class="control-label" for="pgc-original">第三方文章</label>（只有<font color="red">解构·城市元素</font>&&<font color="red">精选·下一站</font>填写此信息）
+
+            <div class="controls"  > &nbsp;&emsp;&emsp;原&emsp;文&emsp;URL: <input type="text" id="pgc-original-url" style="width: 300px" value="{{original.url}}"/></div>
+            <div class="controls"  > 文章来源/作者信息: <input type="text" id="pgc-original-source" style="width: 300px" value="{{original.source}}"/><font color="red">（例如：来源：百度百科/作者：黄瓜君）</font></div>
+            <input type="hidden" id="pgc-original-image" style="width: 300px" value="{{original.image}}"/>
+            <div class="controls"  > &emsp;第三方来源名称: <input type="text" id="pgc-original-author" style="width: 300px" value="{{original.author}}"/></div>
+            <div class="controls"  > &nbsp;&emsp;&emsp;第三方描述: <textarea id="pgc-original-desc" style="width: 300px">{{original.desc}}</textarea></div>
+           <!-- {{#ifCond type '1'}} selected {{/ifCond}}-->
+        </div>
+
+        <hr style="height:1px;border:none;border-top:1px solid #555555;">
+        <div class="control-group">
+            <label class="control-label" for="pgc-pgc_title"> 区域名称</label>
+            <div class="controls">
+                <input type="text" id="pgc-pgc_title" placeholder="默认为xxx，不超过n个字" style="width: 400px" value="{{pgc_title}}">
+            </div>
+        </div>
+
+        <div class="control-group comments-group">
+            <label class="control-label">段落推荐信息</label>
+            <div class="controls">
+                <input type="button"  value="新增推荐"   id="addRecomment"><font color="red">&nbsp;&nbsp;&nbsp;POI类型如下：0:景点,1:餐厅,2:购物点,3:购物区域</font>
+                <span class="help-inline" style="color: #0000ff">注意:POI为空的时候、poi的ID填写'****',poi类型为空！</span>
+            </div>
+        </div>
+        {{#if pgc_poi}}
+        {{#each pgc_poi}}
+        <div class="control-group recomments-group">
+            <label class="control-label">段落推荐</label>
+            <div class="controls">
+                POI的ID:<input class="input-xlarge focused recomments" name="_id" style="width:12%" type="text" value="{{_id}}" >
+                poi类型:<input class="input-xlarge focused recomments" name="type" style="width:8px" maxlength="1" type="text" value="{{type}}" >
+                段落描述:<textarea class="input-xlarge focused recomments" name="poi_desc" style="width: 300px">{{poi_desc}}</textarea>
+                <input class="input-xlarge focused recomments" name="poi_image" style="width:14%"  readonly  type="hidden" value="{{poi_image}}" >
+                段落标题:<textarea class="input-xlarge focused recomments" name="poi_image_desc" style="width:200px">{{poi_image_desc}}</textarea>
+                <!-- <textarea class="input-xlarge focused recomments" name="poi_image_desc" style="width: 200px" type="text" value="{{poi_image_desc}}" >-->
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        <!--    <div class="control-group">
+                <label class="control-label" for="pgc-desc">品牌描述</label>
+                <div class="controls">
+                  &lt;!&ndash;  <input type="text" id="pgc-desc" placeholder="必填" value="{{desc}}">&ndash;&gt;
+                    <textarea   id="pgc-desc" cols="10">{{desc}}</textarea>
+                </div>
+            </div>-->
+    </fieldset>
+
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

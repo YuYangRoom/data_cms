@@ -1,0 +1,12 @@
+	<% layout('layout') -%>
+	<% script('libs/angular-1.2.12/angular.min.js') -%>
+	<% script('libs/angular-1.2.12/angular-route.min.js') -%>
+	<% script('app/editor.js') -%>
+
+	<div id="wrapper" ng-app="editors">
+		<ul ng-controller="EditorListCtrl">
+			<li ng-repeat="editor in chineseeditors">
+				<h5>editor.username</h5>
+			</li>
+		</ul>
+	</div>

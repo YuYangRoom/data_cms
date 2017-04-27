@@ -1,0 +1,685 @@
+<form class="form-horizontal">
+    <fieldset class="basicmsg">
+        <legend>基本信息<a style="margin-left: 20px" id="back" href="">返回</a>
+            <!-- <button id="top_save" style="float:right" class="btn btn-primary">保存</button> -->
+        </legend>
+        <div class="control-group">
+            <label class="control-label" for="placeId">Place_Id</label>
+            <div class="controls">
+                <input type="text" id="placeId" style="width: 300px" value="{{place_id}}"> {{#if name}} {{else}}<font color="red">新增POI的 Place_Id</font>{{/if}}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="task">所属任务</label>
+
+            <div class="controls">
+                <select id="task_select"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="property-type">类型</label>
+
+            <div class="controls">
+                <input id="show_flag" {{#if _show_flag}} {{else}} disabled="disabled" {{/if}} type="checkbox" {{#if
+                show_flag}}checked{{/if}}>
+                <label class="control-label show_flag" for="show_flag">是否显示</label>
+                <select id="property-type">餐馆 | 购物 | 娱乐
+                    <option value="1" {{#ifCond type
+                    '1'}}selected{{/ifCond}}>餐馆</option>
+                    <option value="2" {{#ifCond type
+                    '2'}}selected{{/ifCond}}>购物</option>
+                    <option value="3" {{#ifCond type
+                    '3'}}selected{{/ifCond}}>娱乐</option>
+                </select>{{#if name}} {{else}}<font color="red">类型一定要正确</font>{{/if}}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="name">名称</label>
+
+            <div class="controls">
+                <input type="text" id="name" placeholder="必填" value="{{name}}">
+                <input type="hidden" id="name_en" placeholder="必填" value="{{name_en}}">
+                {{#if name}} {{else}}<font color="red">手填</font>{{/if}}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="city" readonly placeholder="必填" value="{{city_name}}"
+                   style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city_id}}'>{{city_name}}</option>
+            </select>{{#if name}} {{else}}<font color="red">手填</font>{{/if}}}
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="address">区域</label>
+
+            <div class="controls">
+                <input type="text" id="area_name" placeholder="选填" readonly style="width:100px" value="{{area_name}}">
+                <select id="area_select" style="width:150px">
+                    <option value='{{area_id}}'>{{area_name}}</option>
+                </select>{{#if name}} {{else}}<font color="red">手动填充</font>{{/if}}}
+            </div>
+        </div>
+
+        <div class="control-group" id="big-shopping-show" {{#ifCond type
+        "2"}} style="display:block" {{else}} style="display:none" {{/ifCond}}>
+        <label class="control-label" for="address">大商场</label>
+
+        <div class="controls">
+            <input id="is_big" type="checkbox" {{#if is_big}}checked{{/if}}>
+            <label class="control-label show_flag" for="is_big">是否是大商场</label>
+        </div>
+        </div>
+
+        <div class="control-group" id="belong-to-shopping-show" {{#ifCond type
+        "2"}} {{#if is_big}} style="display:none" {{else}} style="display:block" {{/if}} {{else}} style="display:none"
+        {{/ifCond}}>
+        <label class="control-label" for="address">所属商场</label>
+
+        <div class="controls">
+            <input type="text" id="in_big_name" placeholder="选填" readonly style="width:100px" value="{{in_big_name}}">
+            <select id="big_select">
+                <option value='{{parent._id}}'>{{parent.name}}</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="poi_sortType">POI排序</label>
+
+            <div class="controls">
+                <input type="text" id="poi_sortType" style="width:470px" value="{{poi_sortType}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="address">地址</label>
+
+            <div class="controls">
+                <input type="text" id="address" placeholder="选填" style="width:470px" value="{{address}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="tel">电话</label>
+
+            <div class="controls">
+                <input type="text" id="tel" placeholder="选填" value="{{tel}}">
+                <!--  邮编
+                 <input type="text" id="postal_code" placeholder="选填" value="{{postal_code}}"> -->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="website">网址</label>
+
+            <div class="controls">
+                <input type="text" id="website" placeholder="选填" value="{{website}}">
+                <!-- 创建时间
+                <input type="text" id="create_at" readonly placeholder="当前时间" value="{{create_at}}"> -->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="price">价格描述</label>
+
+            <div class="controls">
+                <input type="text" id="price_desc" placeholder="选填" value="{{price_desc}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="price">价格Level</label>
+
+            <div class="controls">
+                <input type="text" id="price_level" placeholder="选填" value="{{price_level}}">
+                1:超便宜，2:便宜，3:一般，4:贵，5:超级贵
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="latitude">地理位置</label>
+
+            <div class="controls">
+                纬度：
+                <input type="text" id="latitude" placeholder="选填" value="{{latitude}}">
+                经度：
+                <input type="text" id="longitude" placeholder="选填" value="{{longitude}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="brief_introduce">一句话介绍</label>
+
+            <div class="controls">
+                <input type="text" id="brief_introduce" placeholder="选填" style="width:470px"
+                       value="{{brief_introduce}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="introduce">描述</label>
+
+            <div class="controls">
+                <textarea id="introduce" style="width:60%;height:60px">{{introduce}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="tips">Tips</label>
+
+            <div class="controls">
+                <textarea id="tips" style="width:60%;height:60px">{{tips}}</textarea>
+            </div>
+        </div>
+        <!--<div class="control-group">-->
+        <!--<label class="control-label" for="comments">评论</label>-->
+        <!--<div class="controls">-->
+        <!--<textarea id="comments" style="width:80%;height:80px">{{comments.[0]}}</textarea>-->
+        <!--</div>-->
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="recommand_duration">推荐游览时间</label>
+
+            <div class="controls">
+                <input type="text" id="recommand_duration" placeholder="选填" value="{{recommand_duration}}"> （数字，分钟）
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">上午</label>
+
+            <div class="controls">
+                <input id="am" type="checkbox" {{#if am}}checked{{/if}} style="float: none; ">
+                下午<input id="pm" type="checkbox" {{#if pm}}checked{{/if}} style="float: none; ">&nbsp;&nbsp;&nbsp;
+                晚上<input id="ev" type="checkbox" {{#if ev}}checked{{/if}} style="float: none; ">&nbsp;&nbsp;&nbsp;
+                <a id="allday" href="#">全天</a> （如果打钩，表示只能在上午，下午，或晚上才能去）
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="open_time">开放时间</label>
+
+            <div class="controls">
+                <select id="open-day" style="width:100px">
+                    <option value='1'>星期一: </option>
+                    <option value='2'>星期二: </option>
+                    <option value='3'>星期三: </option>
+                    <option value='4'>星期四: </option>
+                    <option value='5'>星期五: </option>
+                    <option value='6'>星期六: </option>
+                    <option value='7'>星期日: </option>
+                </select>
+                <select id="open-time-begin" style="width:100px">
+                    <option value='6'>6:00</option>
+                    <option value='6.5'>6:30</option>
+                    <option value='7'>7:00</option>
+                    <option value='7.5'>7:30</option>
+                    <option value='8'>8:00</option>
+                    <option value='8.5'>8:30</option>
+                    <option value='9'>9:00</option>
+                    <option value='9.5'>9:30</option>
+                    <option value='10'>10:00</option>
+                    <option value='10.5'>10:30</option>
+                    <option value='11'>11:00</option>
+                    <option value='11.5'>11:30</option>
+                    <option value='12'>12:00</option>
+                    <option value='12.5'>12:30</option>
+                    <option value='13'>13:00</option>
+                    <option value='13.5'>13:30</option>
+                    <option value='14'>14:00</option>
+                    <option value='14.5'>14:30</option>
+                    <option value='15'>15:00</option>
+                    <option value='15.5'>15:30</option>
+                    <option value='16'>16:00</option>
+                    <option value='16.5'>16:30</option>
+                    <option value='17'>17:00</option>
+                    <option value='17.5'>17:30</option>
+                    <option value='18'>18:00</option>
+                    <option value='18.5'>18:30</option>
+                    <option value='19'>19:00</option>
+                    <option value='19.5'>19:30</option>
+                    <option value='20'>20:00</option>
+                    <option value='20.5'>20:30</option>
+                    <option value='21'>21:00</option>
+                    <option value='21.5'>21:30</option>
+                    <option value='22'>22:00</option>
+                    <option value='22.5'>22:30</option>
+                    <option value='23'>23:00</option>
+                    <option value='23.5'>23:30</option>
+                    <option value='24'>00:00</option>
+                    <option value='allday'>全天</option>
+                    <option value='close'>关门</option>
+                </select>
+                <select id="open-time-end" style="width:100px">
+                    <option value='6'>6:00</option>
+                    <option value='6.5'>6:30</option>
+                    <option value='7'>7:00</option>
+                    <option value='7.5'>7:30</option>
+                    <option value='8'>8:00</option>
+                    <option value='8.5'>8:30</option>
+                    <option value='9'>9:00</option>
+                    <option value='9.5'>9:30</option>
+                    <option value='10'>10:00</option>
+                    <option value='10.5'>10:30</option>
+                    <option value='11'>11:00</option>
+                    <option value='11.5'>11:30</option>
+                    <option value='12'>12:00</option>
+                    <option value='12.5'>12:30</option>
+                    <option value='13'>13:00</option>
+                    <option value='13.5'>13:30</option>
+                    <option value='14'>14:00</option>
+                    <option value='14.5'>14:30</option>
+                    <option value='15'>15:00</option>
+                    <option value='15.5'>15:30</option>
+                    <option value='16'>16:00</option>
+                    <option value='16.5'>16:30</option>
+                    <option value='17'>17:00</option>
+                    <option value='17.5'>17:30</option>
+                    <option value='18'>18:00</option>
+                    <option value='18.5'>18:30</option>
+                    <option value='19'>19:00</option>
+                    <option value='19.5'>19:30</option>
+                    <option value='20'>20:00</option>
+                    <option value='20.5'>20:30</option>
+                    <option value='21'>21:00</option>
+                    <option value='21.5'>21:30</option>
+                    <option value='22'>22:00</option>
+                    <option value='22.5'>22:30</option>
+                    <option value='23'>23:00</option>
+                    <option value='23.5'>23:30</option>
+                    <option value='24'>00:00</option>
+                    <option value='allday'>全天</option>
+                    <option value='close'>关门</option>
+                </select>
+                <input type="button" value="添加" id="addOpentime">
+            </div>
+            <div class="controls">
+                <ul id="opentime-list">
+                    {{#if open_time}}
+                    {{#each open_time}}
+                    <li><input class="input-xlarge focused opentimes" readonly style="width:160px" name="opentimes"
+                               type="text" value="{{this.desc}}" data-value="{{this.value}}"> <input type="button"
+                                                                                                     value="删除"
+                                                                                                     class="li-del">
+                    <li>
+                        {{/each}}
+                        {{/if}}
+                        <ul>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="lifetag">生活标签</label>
+
+            <div class="controls">
+                <input class="input-xlarge focused" name="addLifetagValue" id="addLifetagValue" type="text" value=""
+                       data-value=""> <input type="button" value="添加" id="addLifetag"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="lifetag-list">
+                    {{#if lifetag}}
+                    {{#each lifetag}}
+                    <li><input class="input-xlarge focused lifetags" readonly style="width:100px" name="lifetags"
+                               type="text" value="{{name}}" data-value="{{_id}}"> <input type="button" value="删除"
+                                                                                         class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+
+
+        {{#ifCond type "1"}}
+        <div class="control-group services">
+            <label class="control-label">服务设施</label>
+            <ul>
+                <li>
+                    <input id="wifi" type="checkbox" {{#if info.wifi}}checked{{/if}}>
+                    <label class="control-label" for="wifi">免费WIFI</label>
+                </li>
+                <li>
+                    <input id="yu_ding" type="checkbox" {{#if info.yu_ding}}checked{{/if}}>
+                    <label class="control-label" for="yu_ding">可以预定</label>
+                </li>
+                <li>
+                    <input id="delivery" type="checkbox" {{#if info.delivery}}checked{{/if}}>
+                    <label class="control-label" for="delivery">可以送餐</label>
+                </li>
+                <li>
+                    <input id="take_out" type="checkbox" {{#if info.take_out}}checked{{/if}}>
+                    <label class="control-label" for="take_out">可以带走</label>
+                </li>
+                <li>
+                    <input id="card" type="checkbox" {{#if info.card}}checked{{/if}}>
+                    <label class="control-label" for="card">卡支付</label>
+                </li>
+
+                <li>
+                    <input id="g_f_kid" type="checkbox" {{#if info.g_f_kid}}checked{{/if}}>
+                    <label class="control-label" for="g_f_kid">是否适合孩子</label>
+                </li>
+                <li>
+                    <input id="g_f_group" type="checkbox" {{#if info.g_f_group}}checked{{/if}}>
+                    <label class="control-label" for="g_f_group">是否适合一起聚餐</label>
+                </li>
+                <li>
+                    <input id="out_seat" type="checkbox" {{#if info.out_seat}}checked{{/if}}>
+                    <label class="control-label" for="out_seat">外面是否有座位</label>
+                </li>
+                <li>
+                    <input id="tv" type="checkbox" {{#if info.tv}}checked{{/if}}>
+                    <label class="control-label" for="tv">是否有电视</label>
+                </li>
+                <li>
+                    <input id="waiter" type="checkbox" {{#if info.waiter}}checked{{/if}}>
+                    <label class="control-label" for="waiter">是否有服务生</label>
+                </li>
+                <li>
+                    <label class="control-label" for="g_for">适合什么</label>
+                    <input type="text" id="g_for" placeholder="选填" value="{{info.g_for}}">
+                </li>
+                <li>
+                    <label class="control-label" for="noise">噪音</label>
+                    <input type="text" id="noise" placeholder="选填" value="{{info.noise}}">
+                </li>
+                <li>
+                    <label class="control-label" for="alcohol">酒水</label>
+                    <input type="text" id="alcohol" placeholder="选填" value="{{info.alcohol}}">
+                </li>
+            </ul>
+        </div>
+        {{/ifCond}}
+        {{#if name}}
+        <legend>置顶评论相关信息</legend>
+        <!--餐馆订餐url-->
+        {{#ifCond type "1"}}
+        <div class="control-group">
+            <label class="control-label" for="openTable_url">餐馆订餐URL</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<input id="openTable_url" style="width:55%" type="text" value="{{openTable_url}}">
+            <a href="{{openTable_url}}" target="_blank">浏览网页信息</a>
+        </div>
+        {{/ifCond}}
+        <!--餐厅、购物评论列表-->
+        <div class="control-group">
+            <label class="control-label" for="comments_url">评论内容URL</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<input id="comments_url" style="width:55%" type="text" value="{{comments_url}}">
+            <a href="{{comments_url}}" target="_blank">浏览网页信息</a>
+        </div>
+        <div class="control-group comments-group">
+            <label class="control-label">评论列表</label>
+            <div class="controls">
+                <input type="button"  value="增加评论"   id="addComment">
+            </div>
+        </div>
+        {{#if comments_top}}
+        {{#each comments_top}}
+        <div class="control-group comments-group">
+            <label class="control-label">原始评论</label>
+            <div class="controls">
+                title:<input class="input-xlarge focused comments" name="title" style="width:8%" type="text" value="{{title}}" >
+                rating: <input class="input-xlarge focused comments" name="rating" style="width:8px"   maxlength="1" type="text" value="{{rating}}" >
+                text: <textarea class="input-xlarge focused comments" name="text"  style="width:30%" >{{text}}</textarea>
+                nickname: <input class="input-xlarge focused comments" name="nickname" style="width: 6%"  type="text" value="{{nickname}}" >
+                date: <input class="input-xlarge focused comments" name="date" style="width:7%"  type="text" value="{{date}}" onfocus="setday(this)"  readonly="readonly">
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        {{/if}}
+        {{#ifCond type "2"}}
+        <legend>品牌、活动管理</legend>
+        <div class="control-group">
+            <label class="control-label" for="brandtag">品牌标签</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addBrandtagValue" id="addBrandtagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addBrandtag"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="brandtag-list">
+                    {{#if brand}}
+                    {{#each brand}}
+                    <li><input class="input-xlarge focused brandtags" readonly style="width:100px" name="brandtags"
+                               type="text" value="{{title}}" data-value="{{_id}}"> <input type="button" value="删除"  class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+        <!--购物活动标签-->
+        {{#ifCond type "2"}}
+        <div class="control-group">
+            <label class="control-label" for="activitytag">活动标签</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addActivitytagValue" id="addActivitytagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addActivitytag"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="activitytag-list">
+                    {{#if activities}}
+                    {{#each activities}}
+                    <li><input class="input-xlarge focused activitytags" readonly style="width:100px" name="activitytags"
+                               type="text" value="{{title}}" data-value="{{_id}}"> <input type="button" value="删除"  class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+    </fieldset>
+    <fieldset id="Rank-msg">
+        <legend>排名相关信息</legend>
+        <div class="control-group">
+            <label class="control-label" for="free-wifi">来源链接</label>
+
+            <div class="controls">
+                <input id="url" type="text" value="{{url}}">
+                <a href="{{url}}" target="_blank">点击查看</a>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="free-wifi">评星</label>
+
+            <div class="controls">
+                <input type="text" id="rating" value="{{rating}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="reviews">评论数</label>
+
+            <div class="controls">
+                <input type="text" id="reviews" value="{{reviews}}">
+            </div>
+        </div>
+        {{#ifCond type "1"}}
+
+        <div class="control-group">
+            <label class="control-label" for="addCategoryValue">餐馆二级标签</label>
+
+            <div class="controls">
+                <input class="input-xlarge focused" name="addCategoryValue" id="addCategoryValue" type="text" value=""
+                       data-value=""> <input type="button" value="添加" id="addCategory"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="category-list">
+                    {{#if category}}
+                    {{#each category}}
+                    <li><input class="input-xlarge focused categorys" readonly style="width:100px" name="categorys"
+                               type="text" value="{{name}}" data-value="{{_id}}"> <input type="button" value="删除"
+                                                                                         class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "2"}}
+        <div class="control-group">
+            <label class="control-label" for="addCategoryValue">购物二级标签</label>
+
+            <div class="controls">
+                <input class="input-xlarge focused" name="addCategoryValue" id="addCategoryValue" type="text" value=""
+                       data-value=""> <input type="button" value="添加" id="addCategory"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="category-list">
+                    {{#if category}}
+                    {{#each category}}
+                    <li><input class="input-xlarge focused categorys" readonly style="width:100px" name="categorys"
+                               type="text" value="{{name}}" data-value="{{_id}}"> <input type="button" value="删除"
+                                                                                         class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "1"}}
+        <div class="control-group">
+            <label class="control-label" for="ress">餐馆一级标签(新)</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addRestagValue" id="addRestagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addRestag"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="restag-list">
+                    {{#if restags}}
+                    {{#each restags}}
+                    <li><input class="input-xlarge focused restags" readonly style="width:100px" name="Restags"
+                               type="text" value="{{title}}" data-value="{{_id}}" data-enname="{{en_name}}" > <input type="button" value="删除"  class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+        <div class="control-group">
+            <label class="control-label" for="recommand_flag">推荐</label>
+
+            <div class="controls">
+                <input type="checkbox" id="recommand_flag" {{#if recommand_flag}}checked{{/if}}>
+                <label class="control-label show_flag" for='recommand_flag'>是否推荐</label>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="index_flag">城市首页显示</label>
+
+            <div class="controls">
+                <input type="checkbox" id="index_flag" {{#if index_flag}}checked{{/if}}>
+                <label class="control-label show_flag" for='index_flag'>是否放在城市首页显示</label><span
+                    style="color:#2d393d">*</span>
+            </div>
+        </div>
+        <!--购物一级标签-->
+        {{#ifCond type "2"}}
+        <div class="control-group">
+            <label class="control-label" for="shops">购物一级标签</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addShoptagValue" id="addShoptagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addShoptag"><font color="red">&nbsp;&nbsp;&nbsp;需要点击“添加”</font>
+            </div>
+            <div class="controls">
+                <ul id="shoptag-list">
+                    {{#if shoptags}}
+                    {{#each shoptags}}
+                    <li><input class="input-xlarge focused shoptags" readonly style="width:100px" name="shoptags"
+                               type="text" value="{{title}}" data-value="{{_id}}"> <input type="button" value="删除"  class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "1"}}
+        <div class="control-group">
+            <label for="" class="control-label">餐馆一级标签(旧)</label>
+
+            <div class="controls">
+                {{#if tags}}
+                {{#ifHas tags 'localflag'}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg active" data-value="localflag">当地特色</button>
+                {{else}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="localflag">当地特色</button>
+                {{/ifHas}}
+
+                {{#ifHas tags 'michilin'}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg active" data-value="michilin">米其林</button>
+                {{else}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="michilin">米其林</button>
+                {{/ifHas}}
+
+                {{#ifHas tags 'bestfordinner'}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg active" data-value="bestfordinner">适合晚餐
+                </button>
+                {{else}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="bestfordinner">适合晚餐</button>
+                {{/ifHas}}
+
+                {{#ifHas tags 'popular'}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg active" data-value="popular">流行</button>
+                {{else}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="popular">流行</button>
+                {{/ifHas}}
+                {{else}}
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="localflag">当地特色</button>
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="michilin">米其林</button>
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="bestfordinner">适合晚餐</button>
+                <button type="button" class="tagsbtn btn btn-primary btn-lg" data-value="popular">流行</button>
+                {{/if}}
+            </div>
+        </div>
+        {{/ifCond}}
+        <div class="control-group">
+            <label class="control-label" for="ranking">排名</label>
+
+            <div class="controls">
+                <input id="ranking" type="text" value="{{ranking}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="score">总体评分</label>
+
+            <div class="controls">
+                <input type="text" id="score" readonly placeholder="60" value="{{score}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="rating_service">服务评价</label>
+
+            <div class="controls">
+                <input type="text" id="rating_service" readonly placeholder="3" value="{{rating_service}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="rating_env">环境评价</label>
+
+            <div class="controls">
+                <input type="text" id="rating_env" readonly placeholder="3" value="{{rating_env}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="rating_food_trust"> 食物 [ 信用 ] 评价</label>
+
+            <div class="controls">
+                <input type="text" id="rating_food_trust" readonly placeholder="3"
+                       {{#if rating_food}} value="{{rating_food}}" {{else}} value="{{rating_trust}}" {{/if}}>
+            </div>
+        </div>
+    </fieldset>
+    <div class="pull-right">
+        <button id="review" class="btn">预览</button>
+        {{#ifCond user.type "-1"}}
+        {{else}}
+        <button id="save" class="btn btn-primary">保存</button>
+        {{/ifCond}}
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

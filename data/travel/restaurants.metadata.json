@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "travel.restaurants", "name" : "_id_" }, { "v" : 1, "key" : { "city_id" : 1 }, "ns" : "travel.restaurants", "name" : "city_id_1", "safe" : true } ] }

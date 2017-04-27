@@ -1,0 +1,230 @@
+
+
+[class^="icomoon-"], [class*=" icomoon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	float: left;
+	color: #62687e;
+	font-weight: 200;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="icomoon-"]{
+	font-size: 16px;
+	padding: 15px 10px 15px 11px;
+	text-align: center;
+	width: 40px;
+}
+
+
+.row-fluid h1,.row-fluid h2,.row-fluid h3,.row-fluid h4,.row-fluid h5,.row-fluid h6,.row-fluid p,.row-fluid dl,.row-fluid dd,.row-fluid ul{
+	margin:0;
+}
+.row-fluid{
+	margin-bottom: 20px;
+}
+.row-fluid .span8{
+	width: 80%;
+}
+.icomoon-th-list:before{
+	content: "\e60d";
+}
+.widget-buttons a{
+	float: right;
+}
+.icomoon-plus:before{
+	content: "\e601"
+}
+.widget-tasks-assigned{
+    max-height: 800px;
+}
+.usertable{
+	height: 324px;
+	border-bottom: 1px solid #ddd;
+}
+.widget{
+	width: 800px;
+	/*height: 410px;*/
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+.widget-header{
+	height: 50px;
+	background-color: #efefef;
+}
+.widget-buttons a{
+	cursor: pointer;
+}
+.widget-header h5{
+	float: left;
+	margin-top: 15px;
+	color: #62687e;
+	font-weight: 200;
+}
+
+.widget-tasks-assigned li{
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+	color: #9d9d9d;
+	height: 80px;
+}
+.widget-tasks-assigned li li{
+	float: left;
+	width: 7%;
+	height: 74px;
+	border-right: 1px solid #ddd;
+	border-bottom: none;
+}
+.widget-tasks-assigned li li:nth-child(2){
+	width: 57%;
+}
+.widget-tasks-assigned li li:last-child{
+	border-right: none;
+    width: 20%
+}
+.widget-tasks-assigned li li:nth-child(1),
+.widget-tasks-assigned li li:nth-child(3),
+.widget-tasks-assigned li li:nth-child(4)
+{
+    text-align: center;
+}
+.widget-tasks-assigned li li h3
+{
+    margin-top: 25px;
+}
+.widget-tasks-assigned li li h4
+{
+    margin-top: 18px;
+}
+.widget-tasks-assigned .content
+{
+    font-size: 13px;
+    width: 100%;
+    height: 74px;
+    color: #62687e;
+	/*padding: 5px 10px 0 10px;*/
+    border-bottom: 1px solid #ddd;
+}
+.taskdetail dl
+{
+    padding: 10px 0 0 10px;
+}
+.taskdetail dl h5
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #62687e;
+}
+.bar
+{
+    height: 5px;
+    background-color: #9ad4ec;
+}
+.progress
+{
+    height: 5px;
+}
+.widget .pager
+{
+    float: right;
+    margin: 1px 7px 0 0;
+}
+.content .btn
+{
+    
+    padding: 1px 5px;
+}
+
+.btn.viewone{
+    margin: 0;
+    padding: 1px 5px;
+}
+/*editor manage====================================================================*/
+.icomoon-users:before
+{
+    content: '\e613';
+}
+.usertable table a.btn
+{
+    margin: 0;
+}
+/*jquery vmap css======================================================*/
+.eachcountrydetail
+{
+    float: left;
+    padding-left: 50px;
+}
+.eachcountrydetail li label
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+.jqvmap-label
+{
+    font-family: sans-serif, Verdana;
+    font-size: smaller;
+    position: absolute;
+    display: none;
+    padding: 3px;
+    color: white;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    background: #292929;
+}
+.jqvmap-zoomin, .jqvmap-zoomout
+{
+    line-height: 10px;
+    position: absolute;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    padding: 3px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    background: #000;
+}
+.jqvmap-zoomin
+{
+    top: 10px;
+}
+.jqvmap-zoomout
+{
+    top: 30px;
+}
+.jqvmap-region
+{
+    cursor: pointer;
+}
+.jqvmap-ajax_response
+{
+  width: 100%;
+  height: 500px;
+}
+#vmap{
+	float: left;
+}
+
+.form-horizontal textarea{
+    width: 60%;
+}
+#checkdetail{
+    width: 700px;
+}
+#checkdetail .modal-body{
+    height: 500px;
+}
+#checkdetail input[type=checkbox]{
+    margin: 4px;
+}

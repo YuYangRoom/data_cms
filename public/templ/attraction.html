@@ -1,0 +1,269 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>添加新景点</h3><h4>(未抓取到的信息、通过编辑该景点进行补充！)</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+        <fieldset>
+      <!--      <div class="control-group">
+                <label class="control-label" for="task">所属任务</label>
+                <div class="controls">
+                    <select id="task_select"></select>
+                </div>
+            </div>-->
+            <div class="control-group">
+                <label class="control-label" for="place_id">Place_Id:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="place_id" name="place_id" type="text" value="{{place_id}}}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">城市</label>
+                <input type="text" id="city" readonly placeholder="必填" value="" style="width:60px;margin-left:20px">
+                <select id="continents_select" name="continents" style="width:100px">
+                    <option value='AS'>亚洲</option>
+                    <option value='EU'>欧洲</option>
+                    <option value='NA'>美洲</option>
+                    <option value='SA'>南美</option>
+                    <option value='AF'>非洲</option>
+                    <option value='OC'>大洋洲</option>
+                </select>
+                <select id="country_select" style="width:150px">
+                    <option value=''></option>
+                </select>
+                <select id="city_select" style="width:150px">
+                    <option value=''></option>
+                </select><span class="help-inline"></span>{{#if attractions}} {{else}}<font color="red">此处必须手工填写</font>{{/if}}}
+            </div>
+               <!--<div class="control-group">
+                <label class="control-label" for="attractions_en">景点名(En)</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions_en" name="attractions_en" type="text"><span
+                        class="help-inline">不能为空</span>
+                </div>
+            </div>-->
+
+            <div class="control-group">
+                <label class="control-label" for="attractions">景点名</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions" name="attractions" placeholder="必填" type="text">{{#if attractions}} {{else}}<font color="red">此处必须手工填写</font>{{/if}}}
+                </div>
+            </div>
+
+          <!--  <div class="control-group">
+                <label class="control-label" for="address">地址</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="address" name="address" type="text"><span class="help-inline">不能为空</span>
+                </div>
+            </div>-->
+            <div class="control-group">
+                <label class="control-label" for="price">价格</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="price" name="price" type="text"><span class="help-inline"></span>
+                </div>
+            </div>
+            <!--<div class="control-group">-->
+                <!--<label class="control-label" for="opentime">开放时间</label>-->
+                <!--<div class="controls">-->
+                    <!--<input class="input-xlarge focused" id="opentime" name="opentime" type="text"><span class="help-inline"></span>-->
+                <!--</div>-->
+            <!--</div>-->
+          <!--  <div class="control-group">
+                <label class="control-label" for="open_time">开放时间</label>
+                <div class="controls">
+                    <select id="open-day" style="width:100px">
+                        <option value='1'>周一</option>
+                        <option value='2'>周二</option>
+                        <option value='3'>周三</option>
+                        <option value='4'>周四</option>
+                        <option value='5'>周五</option>
+                        <option value='6'>周六</option>
+                        <option value='7'>周日</option>
+                    </select>
+                    <select id="open-time-begin" style="width:100px">
+                        <option value='6'>6 am</option><option value='6.5'>6:30 am</option>
+                        <option value='7'>7 am</option><option value='7.5'>7:30 am</option>
+                        <option value='8'>8 am</option><option value='8.5'>8:30 am</option>
+                        <option value='9'>9 am</option><option value='9.5'>9:30 am</option>
+                        <option value='10'>10 am</option><option value='10.5'>10:30 am</option>
+                        <option value='11'>11 am</option><option value='11.5'>11:30 am</option>
+                        <option value='12'>12 am</option><option value='12.5'>12:30 am</option>
+                        <option value='13'>1 pm</option><option value='13.5'>1:30 pm</option>
+                        <option value='14'>2 pm</option><option value='14.5'>2:30 pm</option>
+                        <option value='15'>3 pm</option><option value='15.5'>3:30 pm</option>
+                        <option value='16'>4 pm</option><option value='16.5'>4:30 pm</option>
+                        <option value='17'>5 pm</option><option value='17.5'>5:30 pm</option>
+                        <option value='18'>6 pm</option><option value='18.5'>6:30 pm</option>
+                        <option value='19'>7 pm</option><option value='19.5'>7:30 pm</option>
+                        <option value='20'>8 pm</option><option value='20.5'>8:30 pm</option>
+                        <option value='21'>9 pm</option><option value='21.5'>9:30 pm</option>
+                        <option value='22'>10 pm</option><option value='22.5'>10:30 pm</option>
+                        <option value='23'>11 pm</option><option value='23.5'>11:30 pm</option>
+                        <option value='24'>12 pm</option><option value='allday'>全天</option>
+                        <option value='close'>关门</option>
+                    </select>
+                    <select id="open-time-end" style="width:100px">
+                        <option value='0.5'>0:30 am</option>
+                        <option value='1'>1 am</option>
+                        <option value='1.5'>1:30 am</option>
+                        <option value='2'>2 am</option>
+                        <option value='2.5'>2:30 am</option>
+                        <option value='3'>3 am</option>
+                        <option value='3.5'>3:30 am</option>
+                        <option value='4'>4 am</option>
+                        <option value='4.5'>4:30 am</option>
+                        <option value='5'>5 am</option>
+                        <option value='5.5'>5:30 am</option>
+                        <option value='6'>6 am</option><option value='6.5'>6:30 am</option>
+                        <option value='7'>7 am</option><option value='7.5'>7:30 am</option>
+                        <option value='8'>8 am</option><option value='8.5'>8:30 am</option>
+                        <option value='9'>9 am</option><option value='9.5'>9:30 am</option>
+                        <option value='10'>10 am</option><option value='10.5'>10:30 am</option>
+                        <option value='11'>11 am</option><option value='11.5'>11:30 am</option>
+                        <option value='12'>12 am</option><option value='12.5'>12:30 am</option>
+                        <option value='13'>1 pm</option><option value='13.5'>1:30 pm</option>
+                        <option value='14'>2 pm</option><option value='14.5'>2:30 pm</option>
+                        <option value='15'>3 pm</option><option value='15.5'>3:30 pm</option>
+                        <option value='16'>4 pm</option><option value='16.5'>4:30 pm</option>
+                        <option value='17'>5 pm</option><option value='17.5'>5:30 pm</option>
+                        <option value='18'>6 pm</option><option value='18.5'>6:30 pm</option>
+                        <option value='19'>7 pm</option><option value='19.5'>7:30 pm</option>
+                        <option value='20'>8 pm</option><option value='20.5'>8:30 pm</option>
+                        <option value='21'>9 pm</option><option value='21.5'>9:30 pm</option>
+                        <option value='22'>10 pm</option><option value='22.5'>10:30 pm</option>
+                        <option value='23'>11 pm</option><option value='23.5'>11:30 pm</option>
+                        <option value='24'>12 pm</option><option value='allday'>全天</option>
+                        <option value='close'>关门</option>
+                    </select>
+                    <input type="button" value="添加" id="addOpentime">
+                </div>
+                <div class="controls">
+                    <ul id="opentime-list">
+                        {{#if opentime}}
+                        {{#each opentime}}
+                        <li><input class="input-xlarge focused opentimes" readonly style="width:160px" name="opentimes" type="text" value="{{this.desc}}" data-value="{{this.value}}"> <input type="button" value="删除" class="li-del">
+                        <li>
+                            {{/each}}
+                            {{/if}}
+                            <ul>
+                </div>
+            </div>-->
+            <div class="control-group">
+                <label class="control-label" for="traffic_info">交通信息</label>
+                <div class="controls">
+                    <textarea id="traffic_info" name="traffic_info" style="width:80%;height:30px"></textarea>
+                </div>
+            </div>
+			<div class="control-group">
+                <label class="control-label">推荐白天或晚上</label>
+                <div class="controls">
+                    <input type="radio" name="dayornight" value = "1" >白天<br>
+                    <input type="radio" name="dayornight" value = "0" >晚上<br>
+                </div>
+            </div>
+          <!--  <div class="control-group">
+                <label class="control-label" for="website">网址</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="website" name="website" type="text"><span class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="telno">电话</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="telno" name="telno" type="text"><span class="help-inline"></span>
+                </div>
+            </div>-->
+            <div class="control-group">
+                <label class="control-label" for="telno">推荐游览时间</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="recommand_duration" name="recommand_duration" type="text"><span class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_reason">推荐理由</label>
+
+                <div class="controls">
+                    <textarea id="recommand_reason" cols="20" rows="3">{{recommand_reason}}</textarea>
+
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="short_introduce">一句话简介</label>
+                <div class="controls">
+                    <textarea id="short_introduce" style="width:80%;height:60px"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="introduce">简介</label>
+                <div class="controls">
+                    <textarea id="introduce" style="width:80%;height:150px"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="tips">Tips</label>
+                <div class="controls">
+                    <textarea id="tips" style="width:80%;height:150px"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">是否推荐</label>
+                <div class="controls">
+                    <input type="radio" name="recommand_flag" value = "1"  >推荐<br>
+                    <input type="radio" name="recommand_flag" value = "0" >不推荐<br>
+                </div>
+            </div>
+            <div class="control-group" >
+                <label class="control-label">城市首页显示</label>
+                <div class="controls">
+                    <input id="index_flag" type="checkbox" >是否放在城市首页显示<span style="color:#313335">*</span>
+                </div>
+            </div>
+
+            <div class="control-group" >
+                <label class="control-label">是否显示</label>
+                <div class="controls">
+                    <input id="show_flag" {{#if _show_flag}} {{else}} disabled="disabled" {{/if}} type="checkbox" >
+                </div>
+            </div>
+
+            <div class="control-group" >
+                <label class="control-label">上午</label>
+                <div class="controls">
+                    <input id="am"  type="checkbox" checked="checked" style="float: none; ">
+                    下午<input id="pm"  type="checkbox" checked="checked" style="float: none; ">&nbsp;&nbsp;&nbsp;
+                    晚上<input id="ev"  type="checkbox" checked="checked" style="float: none; ">&nbsp;&nbsp;&nbsp;
+                    <a id="allday" href="#">全天</a> （如果打钩，表示只能在上午，下午，或晚上才能去）
+                </div>
+            </div>
+
+           <!-- <div class="control-group label-group">
+                <label class="control-label" >主标签</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="masterLabel" name="label" data-value="" type="text">
+                    <input type="button" value="增加标签" id="addlabel">
+                </div>
+            </div>-->
+   <!--         <div class="control-group">
+                <label class="control-label" for="latitude">纬度</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="latitude" name="latitude" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="longitude">经度</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="longitude" name="longitude" type="text">
+                </div>
+            </div>-->
+            <div class="control-group operate-group">
+                <input type="button" class="btn btn-primary" id="save" value="保存"></button>
+                <button class="btn" id="cancel">取消</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="map_canvas" style="min-height:600px"></div>
+</div>

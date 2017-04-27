@@ -1,0 +1,50 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>版本控制</legend>
+
+        {{#ifCond version "更新googlePlace"}}
+        <div class="control-group">
+            <label class="control-label" for="version_mang-type"> POI类型</label>
+            <div class="controls">
+                <input type="text" id="version_mang-type" >
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="version_mang-_id"> POI的ID</label>
+            <div class="controls">
+                <input type="text" id="version_mang-_id" >
+            </div>
+        </div>
+        {{else}}
+        <div class="control-group">
+            <label class="control-label" for="version_mang-version"> 版本号</label>
+            <div class="controls">
+                <input type="text" id="version_mang-version" placeholder="必填" value="{{version}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="version_mang-isShow">是否显示</label>
+            <div class="controls">
+                <select id="version_mang-isShow">
+                    <option value=true {{#ifCond isShow true}}selected{{/ifCond}}>是</option>
+                    <option value=false {{#ifCond isShow false}}selected{{/ifCond}}>否</option>
+
+                </select>
+            </div>
+        </div>
+        <input type="hidden" id="version_mang-v" placeholder="必填" value="{{__v}}">
+        <input type="hidden" id="version_mang-operating" placeholder="必填" value="{{operating}}">
+        <input type="hidden" id="version_mang-platform" placeholder="必填" value="{{platform}}">
+        {{/ifCond}}
+    </fieldset>
+    <div class="pull-right">
+        {{#ifCond version "更新googlePlace"}}
+        <button id="save" class="btn btn-primary">更新</button>
+        <button id="cancel" class="btn">取消</button>
+        {{else}}
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+        {{/ifCond}}
+
+    </div>
+</form>

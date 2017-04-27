@@ -1,0 +1,494 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>修改景点</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="place_id">Place_Id:</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="place_id" name="place_id" type="text" value="{{place_id}}}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="task">所属任务</label>
+
+                <div class="controls">
+                    <select id="task_select"></select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">城市</label>
+                <input type="text" id="city" readonly placeholder="必填" value="{{cityname}}"
+                       style="width:60px;margin-left:20px">
+                <select id="continents_select" name="continents" style="width:100px">
+                    <option value='AS'>亚洲</option>
+                    <option value='EU'>欧洲</option>
+                    <option value='NA'>美洲</option>
+                    <option value='SA'>南美</option>
+                    <option value='AF'>非洲</option>
+                    <option value='OC'>大洋洲</option>
+                </select>
+                <select id="country_select" style="width:150px">
+                    <option value=''></option>
+                </select>
+                <select id="city_select" style="width:150px">
+                    <option value='{{cityid}}'>{{cityname}}</option>
+                </select><span class="help-inline">不能为空</span>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="attractions_en">景点名(En)</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions_en" name="attractions_en" type="text"
+                           value="{{attractions_en}}"><span class="help-inline">不能为空</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="attractions">景点名</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions" name="attractions" type="text"
+                           value="{{attractions}}"><span class="help-inline">不能为空</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="attractions_type">景点的类型</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions_type" name="attractions_type" type="text"
+                           value="{{type}}" readonly><span class="help-inline">必须为0</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="attractions_sortType">景点POI排序</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="attractions_sortType" name="attractions_sortType" type="text"
+                           value="{{attractions_sortType}}" >
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="address">地址</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="address" name="address" type="text"
+                           value="{{address}}"><span class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="price">价格</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="price" name="price" type="text" value="{{price}}"><span
+                        class="help-inline"></span>
+                </div>
+            </div>
+            <!--<div class="control-group">-->
+            <!--<label class="control-label" for="opentime">开放时间</label>-->
+            <!--<div class="controls">-->
+            <!--<input class="input-xlarge focused" id="opentime" name="opentime" type="text" value="{{opentime}}"><span class="help-inline"></span>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="control-group">
+                <label class="control-label" for="open_time">开放时间</label>
+
+                <div class="controls">
+                    <select id="open-day" style="width:100px">
+                        <option value='1'>星期一: </option>
+                        <option value='2'>星期二: </option>
+                        <option value='3'>星期三: </option>
+                        <option value='4'>星期四: </option>
+                        <option value='5'>星期五: </option>
+                        <option value='6'>星期六: </option>
+                        <option value='7'>星期日: </option>
+                    </select>
+                    <select id="open-time-begin" style="width:100px">
+                        <option value='6'>6:00</option>
+                        <option value='6.5'>6:30</option>
+                        <option value='7'>7:00</option>
+                        <option value='7.5'>7:30</option>
+                        <option value='8'>8:00</option>
+                        <option value='8.5'>8:30</option>
+                        <option value='9'>9:00</option>
+                        <option value='9.5'>9:30</option>
+                        <option value='10'>10:00</option>
+                        <option value='10.5'>10:30</option>
+                        <option value='11'>11:00</option>
+                        <option value='11.5'>11:30</option>
+                        <option value='12'>12:00</option>
+                        <option value='12.5'>12:30</option>
+                        <option value='13'>13:00</option>
+                        <option value='13.5'>13:30</option>
+                        <option value='14'>14:00</option>
+                        <option value='14.5'>14:30</option>
+                        <option value='15'>15:00</option>
+                        <option value='15.5'>15:30</option>
+                        <option value='16'>16:00</option>
+                        <option value='16.5'>16:30</option>
+                        <option value='17'>17:00</option>
+                        <option value='17.5'>17:30</option>
+                        <option value='18'>18:00</option>
+                        <option value='18.5'>18:30</option>
+                        <option value='19'>19:00</option>
+                        <option value='19.5'>19:30</option>
+                        <option value='20'>20:00</option>
+                        <option value='20.5'>20:30</option>
+                        <option value='21'>21:00</option>
+                        <option value='21.5'>21:30</option>
+                        <option value='22'>22:00</option>
+                        <option value='22.5'>22:30</option>
+                        <option value='23'>23:00</option>
+                        <option value='23.5'>23:30</option>
+                        <option value='24'>00:00</option>
+                        <option value='allday'>全天</option>
+                        <option value='close'>关门</option>
+                    </select>
+                    <select id="open-time-end" style="width:100px">
+                        <option value='6'>6:00</option>
+                        <option value='6.5'>6:30</option>
+                        <option value='7'>7:00</option>
+                        <option value='7.5'>7:30</option>
+                        <option value='8'>8:00</option>
+                        <option value='8.5'>8:30</option>
+                        <option value='9'>9:00</option>
+                        <option value='9.5'>9:30</option>
+                        <option value='10'>10:00</option>
+                        <option value='10.5'>10:30</option>
+                        <option value='11'>11:00</option>
+                        <option value='11.5'>11:30</option>
+                        <option value='12'>12:00</option>
+                        <option value='12.5'>12:30</option>
+                        <option value='13'>13:00</option>
+                        <option value='13.5'>13:30</option>
+                        <option value='14'>14:00</option>
+                        <option value='14.5'>14:30</option>
+                        <option value='15'>15:00</option>
+                        <option value='15.5'>15:30</option>
+                        <option value='16'>16:00</option>
+                        <option value='16.5'>16:30</option>
+                        <option value='17'>17:00</option>
+                        <option value='17.5'>17:30</option>
+                        <option value='18'>18:00</option>
+                        <option value='18.5'>18:30</option>
+                        <option value='19'>19:00</option>
+                        <option value='19.5'>19:30</option>
+                        <option value='20'>20:00</option>
+                        <option value='20.5'>20:30</option>
+                        <option value='21'>21:00</option>
+                        <option value='21.5'>21:30</option>
+                        <option value='22'>22:00</option>
+                        <option value='22.5'>22:30</option>
+                        <option value='23'>23:00</option>
+                        <option value='23.5'>23:30</option>
+                        <option value='24'>00:00</option>
+                        <option value='allday'>全天</option>
+                        <option value='close'>关门</option>
+                    </select>
+                    <input type="button" value="添加" id="addOpentime">
+                </div>
+                <div class="controls">
+                    <ul id="opentime-list">
+                        {{#if opentime}}
+                        {{#each opentime}}
+                        <li><input class="input-xlarge focused opentimes" readonly style="width:160px" name="opentimes"
+                                   type="text" value="{{this.desc}}" data-value="{{this.value}}"> <input type="button"
+                                                                                                         value="删除"
+                                                                                                         class="li-del">
+                        <li>
+                            {{/each}}
+                            {{/if}}
+                            <ul>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="traffic_info">交通信息</label>
+
+                <div class="controls">
+                    {{#if traffic_info}}
+                    <pre class="editwords">{{traffic_info}}</pre>
+                    <div class="textareawrapper">
+                        <textarea id="traffic_info" name="traffic_info" cols="30" rows="10">{{traffic_info}}</textarea>
+                        <button class="btn textareasurebtn" type="button">确定</button>
+                    </div>
+                    {{else}}
+                    <textarea id="traffic_info" name="traffic_info" cols="30" rows="10"></textarea>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">推荐白天或晚上</label>
+
+                <div class="controls">
+                    {{#ifCond dayornight '1'}}
+                    <input type="radio" name="dayornight" value="1" checked>白天<br>
+                    <input type="radio" name="dayornight" value="0">晚上<br>
+                    {{else}}
+                    <input type="radio" name="dayornight" value="1">白天<br>
+                    <input type="radio" name="dayornight" value="0" checked>晚上<br>
+                    {{/ifCond}}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="website">网址</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="website" name="website" type="text"
+                           value="{{website}}"><span class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="telno">电话</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="telno" name="telno" type="text" value="{{telno}}"><span
+                        class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_duration">推荐游览时间</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="recommand_duration" name="recommand_duration" type="text"
+                           value="{{recommand_duration}}"><span class="help-inline"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="recommand_reason">推荐理由</label>
+
+                <div class="controls">
+                    <textarea id="recommand_reason" cols="20" rows="3">{{recommand_reason}}</textarea>
+                  <!--  <input class="input-xlarge focused" id="recommand_reason" name="recommand_reason" type="text"
+                           value="{{recommand_reason}}"><span class="help-inline"></span>-->
+                </div>
+            </div>
+  <!--          <div class="control-group">
+                <label class="control-label" for="activity">活动5</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="activity" name="activity" type="text"
+                           value="{{activity}}"><span class="help-inline"></span>
+                </div>
+            </div>-->
+            <div class="control-group">
+                <label class="control-label" for="short_introduce">一句话简介</label>
+
+                <div class="controls">
+                    {{#if short_introduce}}
+                    <pre class="editwords">{{short_introduce}}</pre>
+                    <div class="textareawrapper">
+                        <textarea id="short_introduce" cols="30" rows="10">{{short_introduce}}</textarea>
+                        <button class="btn textareasurebtn" type="button">确定</button>
+                    </div>
+                    {{else}}
+                    <textarea id="short_introduce" cols="30" rows="10"></textarea>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="introduce">简介</label>
+
+                <div class="controls">
+                    {{#if introduce}}
+                    <pre class="editwords">{{introduce}}</pre>
+                    <div class="textareawrapper">
+                        <textarea id="introduce" cols="30" rows="10">{{introduce}}</textarea>
+                        <button class="btn textareasurebtn" type="button">确定</button>
+                    </div>
+                    {{else}}
+                    <textarea id="introduce" cols="30" rows="10"></textarea>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="tips">Tips</label>
+
+                <div class="controls">
+                    {{#if tips}}
+                    <pre class="editwords">{{tips}}</pre>
+                    <div class="textareawrapper">
+                        <textarea id="tips" cols="30" rows="10">{{tips}}</textarea>
+                        <button class="btn textareasurebtn" type="button">确定</button>
+                    </div>
+                    {{else}}
+                    <textarea id="tips" cols="30" rows="10"></textarea>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">是否推荐</label>
+
+                <div class="controls">
+                    {{#ifCond recommand_flag '1'}}
+                    <input type="radio" name="recommand_flag" value="1" checked>推荐<br>
+                    <input type="radio" name="recommand_flag" value="0">不推荐<br>
+                    {{else}}
+                    <input type="radio" name="recommand_flag" value="1">推荐<br>
+                    <input type="radio" name="recommand_flag" value="0" checked>不推荐<br>
+                    {{/ifCond}}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">城市首页显示</label>
+
+                <div class="controls">
+                    <input id="index_flag" type="checkbox" {{#ifCond index_flag "1"}}checked{{/ifCond}}> 是否放在城市首页显示<span
+                        style="color:red">*</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">是否显示</label>
+
+                <div class="controls">
+                    <input id="show_flag" {{#if _show_flag}} {{else}} disabled="disabled" {{/if}} type="checkbox"
+                    {{#ifCond show_flag "1"}}checked{{/ifCond}}>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">上午</label>
+
+                <div class="controls">
+                    <input id="am" type="checkbox" {{#if am}}checked{{/if}} style="float: none; ">
+                    下午<input id="pm" type="checkbox" {{#if pm}}checked{{/if}} style="float: none; ">&nbsp;&nbsp;&nbsp;
+                    晚上<input id="ev" type="checkbox" {{#if ev}}checked{{/if}} style="float: none; ">&nbsp;&nbsp;&nbsp;
+                    <a id="allday" href="#">全天</a> （如果打钩，表示只能在上午，下午，或晚上才能去）
+                </div>
+            </div>
+<fieldset>
+    <legend>景点类目、景点标签</legend>
+            <div class="control-group label-group">
+                <label class="control-label">景点类目</label>
+                <div class="controls">
+                    <input class="input-xlarge focused" name="label" id="masterLabel" type="text"  value="{{masterLabel.masterLabel}}" data-value="{{masterLabel._id}}">
+                </div>
+            </div>
+    <div class="control-group label-group">   景点标签：<input type="button"  value="增加标签"   id="addlabel"> </div>
+            {{#if subLabelNew}}
+            {{#each subLabelNew}}
+            <div class="control-group label-group">
+                <label class="control-label">标签</label>
+                <div class="controls">
+                    <input class="input-xlarge focused labels" name="label" type="text" value="{{label}}"
+                           data-value="{{_id}}"> <input type="button" value="删除" class="del">
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+</fieldset>
+            <fieldset id="Rank-msg">
+                <legend>评论相关信息</legend>
+
+                <div class="control-group">
+                    <label class="control-label" for="yelp_rating">Yelp_rating</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="yelp_rating" style="width:10%" type="text" value="{{yelp_rating}}">
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="comments_url">评论内容URL</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="comments_url" style="width:55%" type="text" value="{{comments_url}}">
+                    <a href="{{comments_url}}" target="_blank">浏览网页信息</a>
+                </div>
+             <div class="control-group comments-group">
+                <label class="control-label">置顶评论列表</label>
+                <div class="controls">
+               <input type="button"  value="增加评论"   id="addComment">
+                </div>
+            </div>
+            {{#if comments_top}}
+            {{#each comments_top}}
+            <div class="control-group comments-group">
+                <label class="control-label">原始评论</label>
+                <div class="controls">
+                    title:<input class="input-xlarge focused comments" name="title" style="width:8%" type="text" value="{{title}}" >
+                    rating: <input class="input-xlarge focused comments" name="rating" style="width:8px"   maxlength="1" type="text" value="{{rating}}" >
+                    text: <textarea class="input-xlarge focused comments" name="text"  style="width:30%" >{{text}}</textarea>
+                    nickname: <input class="input-xlarge focused comments" name="nickname" style="width: 8%"  type="text" value="{{nickname}}" >
+                    date: <input class="input-xlarge focused comments" name="date" style="width:7%"  type="text" value="{{date}}" onfocus="setday(this)"  readonly="readonly">
+                    <input type="button" value="删除" class="del">
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+                <legend>活动相关信息</legend>
+                <div class="control-group">
+                    <label class="control-label" for="activitytag">活动标签</label>
+
+                    <div class="controls">
+                        <input class="input-xlarge focused" name="addActivitytagValue" id="addActivitytagValue" type="text" value=""
+                               data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addActivitytag">
+                    </div>
+                    <div class="controls">
+                        <ul id="activitytag-list">
+                            {{#if activities}}
+                            {{#each activities}}
+                            <li><input class="input-xlarge focused activitytags" readonly style="width:100px" name="activitytags"
+                                       type="text" value="{{title}}" data-value="{{_id}}"> <input type="button" value="删除"  class="li-del">
+                            </li>
+                            {{/each}}
+                            {{/if}}
+                            <ul>
+                    </div>
+                </div>
+            </fieldset>
+            <br><br>
+           <!-- <div class="control-group ">
+                <label class="control-label">评论列表</label>
+
+                <div class="controls">
+                    <input type="button" value="增加评论" id="addComment">
+                </div>
+            </div>
+            {{#if subLabel}}
+            {{#each subLabel}}
+            <div class="control-group comment-group">
+                <label class="control-label">评论:</label>
+
+                <div class="controls">
+                    title:<input class="input-xlarge focused " style="width: 6%" name="label" type="text"
+                                 value="{{label}}">
+                    rating:<input class="input-xlarge focused " style="width: 5%" name="label" type="text"
+                                  value="{{label}}">
+                    text:<input class="input-xlarge focused " name="label" style="width: 26%" type="text"
+                                value="{{label}}">
+                    date:<input class="input-xlarge focused " name="label" style="width: 6%" type="text"
+                                value="{{label}}">
+                    nickname:<input class="input-xlarge focused " name="label" style="width: 6%" type="text"
+                                    value="{{label}}">
+                    <input type="button" value="删除" class="del">
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+-->
+            <div class="control-group">
+                <label class="control-label" for="latitude">纬度</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="latitude" name="latitude" type="text" value="{{latitude}}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="longitude">经度</label>
+
+                <div class="controls">
+                    <input class="input-xlarge focused" id="longitude" name="longitude" type="text"
+                           value="{{longitude}}">
+                </div>
+            </div>
+
+            <div class="control-group operate-group">
+                {{#ifCond user.type "-1"}}
+                {{else}}
+                <input type="button" class="btn btn-primary" id="save" value="保存">
+                {{/ifCond}}
+                <input class="btn" id="cancel" value="取消" type="button">
+            </div>
+        </fieldset>
+    </form>
+    <div id="map_canvas" style="min-height:600px"></div>
+</div>

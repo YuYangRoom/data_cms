@@ -1,0 +1,101 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>时间分段</legend>
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="cityname" readonly placeholder="必填" value="{{city.cityname}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city._id}}'>{{city.cityname}}</option>
+            </select><span class="help-inline">不能为空</span>
+        </div>
+
+
+        <div class="control-group comments-group">
+            <label class="control-label">时间段分片</label>
+            <div class="controls">
+                <input type="button"  value="新增时间段"   id="addRecomment_Time">
+            </div>
+        </div>
+        <label class="control-label">时间段信息（原）</label>
+        {{#if time_interval}}
+        {{#each time_interval}}
+        <div class="control-group recomments-group">
+            <div class="controls">
+                <!--<input class="input-xlarge focused recomments" name="start_time" style="width:12%" type="text" value="{{start_time}}" >-->
+                开始时间:
+                <select  class="input-xlarge focused recomments" name="start_time"  style="width:6%" >
+                    <option value="00" {{#ifCond start_time '00'}} selected {{/ifCond}}>00</option>
+                    <option value="01" {{#ifCond start_time '01'}} selected {{/ifCond}}>01</option>
+                    <option value="02" {{#ifCond start_time '02'}} selected {{/ifCond}}>02</option>
+                    <option value="03" {{#ifCond start_time '03'}} selected {{/ifCond}}>03</option>
+                    <option value="04" {{#ifCond start_time '04'}} selected {{/ifCond}}>04</option>
+                    <option value="05" {{#ifCond start_time '05'}} selected {{/ifCond}}>05</option>
+                    <option value="06" {{#ifCond start_time '06'}} selected {{/ifCond}}>06</option>
+                    <option value="07" {{#ifCond start_time '07'}} selected {{/ifCond}}>07</option>
+                    <option value="08" {{#ifCond start_time '08'}} selected {{/ifCond}}>08</option>
+                    <option value="09" {{#ifCond start_time '09'}} selected {{/ifCond}}>09</option>
+                    <option value="10" {{#ifCond start_time '10'}} selected {{/ifCond}}>10</option>
+                    <option value="11" {{#ifCond start_time '11'}} selected {{/ifCond}}>11</option>
+                    <option value="12" {{#ifCond start_time '12'}} selected {{/ifCond}}>12</option>
+                    <option value="13" {{#ifCond start_time '13'}} selected {{/ifCond}}>13</option>
+                    <option value="14" {{#ifCond start_time '14'}} selected {{/ifCond}}>14</option>
+                    <option value="15" {{#ifCond start_time '15'}} selected {{/ifCond}}>15</option>
+                    <option value="16" {{#ifCond start_time '16'}} selected {{/ifCond}}>16</option>
+                    <option value="17" {{#ifCond start_time '17'}} selected {{/ifCond}}>17</option>
+                    <option value="18" {{#ifCond start_time '18'}} selected {{/ifCond}}>18</option>
+                    <option value="19" {{#ifCond start_time '19'}} selected {{/ifCond}}>19</option>
+                    <option value="20" {{#ifCond start_time '20'}} selected {{/ifCond}}>20</option>
+                    <option value="21" {{#ifCond start_time '21'}} selected {{/ifCond}}>21</option>
+                    <option value="22" {{#ifCond start_time '22'}} selected {{/ifCond}}>22</option>
+                    <option value="23" {{#ifCond start_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+                结束时间:<!--<input class="input-xlarge focused recomments" name="end_time" style="width:20%" type="text" value="{{end_time}}" >-->
+                <select  class="input-xlarge focused recomments" name="end_time" style="width:6%" >
+                    <option value="00" {{#ifCond end_time '00'}} selected {{/ifCond}}>00</option>
+                    <option value="01" {{#ifCond end_time '01'}} selected {{/ifCond}}>01</option>
+                    <option value="02" {{#ifCond end_time '02'}} selected {{/ifCond}}>02</option>
+                    <option value="03" {{#ifCond end_time '03'}} selected {{/ifCond}}>03</option>
+                    <option value="04" {{#ifCond end_time '04'}} selected {{/ifCond}}>04</option>
+                    <option value="05" {{#ifCond end_time '05'}} selected {{/ifCond}}>05</option>
+                    <option value="06" {{#ifCond end_time '06'}} selected {{/ifCond}}>06</option>
+                    <option value="07" {{#ifCond end_time '07'}} selected {{/ifCond}}>07</option>
+                    <option value="08" {{#ifCond end_time '08'}} selected {{/ifCond}}>08</option>
+                    <option value="09" {{#ifCond end_time '09'}} selected {{/ifCond}}>09</option>
+                    <option value="10" {{#ifCond end_time '10'}} selected {{/ifCond}}>10</option>
+                    <option value="11" {{#ifCond end_time '11'}} selected {{/ifCond}}>11</option>
+                    <option value="12" {{#ifCond end_time '12'}} selected {{/ifCond}}>12</option>
+                    <option value="13" {{#ifCond end_time '13'}} selected {{/ifCond}}>13</option>
+                    <option value="14" {{#ifCond end_time '14'}} selected {{/ifCond}}>14</option>
+                    <option value="15" {{#ifCond end_time '15'}} selected {{/ifCond}}>15</option>
+                    <option value="16" {{#ifCond end_time '16'}} selected {{/ifCond}}>16</option>
+                    <option value="17" {{#ifCond end_time '17'}} selected {{/ifCond}}>17</option>
+                    <option value="18" {{#ifCond end_time '18'}} selected {{/ifCond}}>18</option>
+                    <option value="19" {{#ifCond end_time '19'}} selected {{/ifCond}}>19</option>
+                    <option value="20" {{#ifCond end_time '20'}} selected {{/ifCond}}>20</option>
+                    <option value="21" {{#ifCond end_time '21'}} selected {{/ifCond}}>21</option>
+                    <option value="22" {{#ifCond end_time '22'}} selected {{/ifCond}}>22</option>
+                    <option value="23" {{#ifCond end_time '23'}} selected {{/ifCond}}>23</option>
+                </select>
+                名称:<input class="input-xlarge focused recomments" name="title" style="width:20%"  type="text" value="{{title}}" >
+                <input type="button" value="删除" class="del">
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </fieldset>
+    <div class="pull-right">
+        <button id="save" class="btn btn-primary">保存</button>
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

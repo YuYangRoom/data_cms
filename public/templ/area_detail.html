@@ -1,0 +1,144 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>基本信息</legend>
+        {{#if area_name}} {{else}}
+        <div class="control-group">
+            <label class="control-label" for="placeId">Place_Id</label>
+            <div class="controls">
+                <input type="text"  style="width:300px" id="placeId" placeholder="购物区Place_Id" >
+            </div>
+        </div>
+        {{/if}}
+        <div class="control-group">
+            <label class="control-label">城市</label>
+            <input type="text" id="city" readonly placeholder="必填" value="{{city_name}}" style="width:60px;margin-left:20px">
+            <select id="continents_select" name="continents" style="width:100px">
+                <option value='AS'>亚洲</option>
+                <option value='EU'>欧洲</option>
+                <option value='NA'>美洲</option>
+                <option value='SA'>南美</option>
+                <option value='AF'>非洲</option>
+                <option value='OC'>大洋洲</option>
+            </select>
+            <select id="country_select" style="width:150px">
+                <option value=''></option>
+            </select>
+            <select id="city_select" style="width:150px">
+                <option value='{{city_id}}'>{{city_name}}</option>
+            </select>{{#if area_name}} {{else}}<font color="red">此处必须手工填写</font>{{/if}}}
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area_name">区域名称</label>
+            <div class="controls">
+                <input type="text" id="area_name" placeholder="必填" value="{{area_name}}">{{#if area_name}} {{else}}<font color="red">此处必须手工填写</font>{{/if}}}
+            </div>
+        </div>
+        {{#if area_name}}
+        <div class="control-group">
+            <label class="control-label" for="area_enname">英文名</label>
+            <div class="controls">
+                <input type="text" id="area_enname"  value="{{area_enname}}">
+            </div>
+        </div>
+        {{/if}}
+        <div class="control-group">
+            <label class="control-label" for="area-introduce">介绍</label>
+            <div class="controls">
+                <textarea type="text" style="width:300px;height:100px;" id="area-introduce">{{area_introduce}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-traffic">交通</label>
+            <div class="controls">
+                <textarea type="text" style="width:300px;height:100px;" id="area-traffic">{{traffic}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-tips">小贴士</label>
+            <div class="controls">
+                <textarea type="text" style="width:300px;height:100px;" id="area-tips">{{tips}}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-brief_introduce">一句话简介</label>
+            <div class="controls">
+                <textarea type="text" style="width:300px;height:20px;" id="area-brief_introduce">{{brief_introduce}}</textarea>
+            </div>
+        </div>
+        {{#if area_name}}
+        <div class="control-group">
+            <label class="control-label" for="area-address">地址</label>
+            <div class="controls">
+                <input type="text" id="area-address"  value="{{address}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-address">电话</label>
+            <div class="controls">
+                <input type="text" id="area-tel"  value="{{tel}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-address">网址</label>
+            <div class="controls">
+                <input type="text" id="area-website"  value="{{website}}">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="area-address">开放时间</label>
+            <div class="controls">
+                <input type="text" id="area-opentime"  value="{{open_time}}">
+            </div>
+        </div>
+        {{/if}}
+        <div class="control-group">
+            <label class="control-label" for="shops">购物一级标签</label>
+            <div class="controls">
+                <input class="input-xlarge focused" name="addShoptagValue" id="addShoptagValue" type="text" value=""
+                       data-value="" data-value1="" data-value2=""> <input type="button" value="添加" id="addShoptag">
+            </div>
+            <div class="controls">
+                <ul id="shoptag-list">
+                    {{#if shoptags}}
+                    {{#each shoptags}}
+                    <li><input class="input-xlarge focused shoptags" readonly style="width:100px" name="shoptags"
+                               type="text" value="{{title}}" data-value="{{_id}}"> <input type="button" value="删除"  class="li-del">
+                    </li>
+                    {{/each}}
+                    {{/if}}
+                    <ul>
+            </div>
+        </div>
+        {{#if area_name}}
+        <div class="control-group">
+            <label class="control-label" for="area-address">添加标签</label>
+            {{#each tags}}
+            <input type="text" class="areatag" value="{{this}}">
+            {{/each}}
+            <button type="button" class="btn btn-success addareatag">增加</button>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="area-latitude">纬度</label>
+            <div class="controls">
+                <input type="text" id="area-latitude"  value="{{latitude}}">
+            </div>
+            <label class="control-label" for="area-longitude">经度</label>
+            <div class="controls">
+                <input type="text" id="area-longitude" value="{{longitude}}">
+            </div>
+        </div>
+        {{/if}}
+        <!-- <div class="control-group">
+            <label class="control-label">封面图片</label>
+            <input type="file" id="area-picture">
+        </div> -->
+    </fieldset>
+    <div class="pull-right">
+        {{#ifCond user.type "-1"}}
+        {{else}}
+        <button id="save" class="btn btn-primary">保存</button>
+        {{/ifCond}}
+        <button id="cancel" class="btn">取消</button>
+    </div>
+</form>

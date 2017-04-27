@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/icomoon.woff'),
+         url('/fonts/icomoon.ttf');
+}
+[class*='icomoon_']:before
+{
+    font-family: 'icomoon';
+    margin-right: 5px;
+}
+.icomoon_home:before
+{
+    content: '\e601';
+}
+.icomoon_city:before
+{
+    content: '\e600';
+}
+.icomoon_attraction:before
+{
+    content: '\e600';
+}
+.icomoon_hotel:before
+{
+    content: '\e607';
+}
+.icomoon_label:before
+{
+    content: '\e602';
+}
+.icomoon_life:before
+{
+    content: '\e609';
+}
+.icomoon_category:before
+{
+    content: '\e609';
+}
+.icomoon_brand:before
+{
+    content: '\e609';
+}
+.icomoon_activity:before
+{
+    content: '\e602';
+}
+.icomoon_lifetag:before
+{
+    content: '\e602';
+}
+.icomoon_user:before
+{
+    content: '\e603';
+}
+.icomoon_labels:before
+{
+    content: '\e602';
+}
+.icomoon_alarm:before
+{
+    content: '\e60f';
+}
+.icomoon_calendar:before
+{
+    content: '\e610';
+}
+.icomoon_bubbles:before
+{
+    content: '\e611';
+}
+.icomoon_caret_down:before
+{
+    content: '\e613';
+}
+.icomoon_caret_right:before
+{
+    content: '\e616';
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/*h1,h2,h3,h4,h5,h6,p,dl,dd,ul{
+    margin:0;
+}*/
+body
+{
+    font-family: 'Microsoft Yahei',sans-serif;
+    width: 100%;
+    background: url(/images/cmsbg.jpg) fixed;
+}
+a
+{
+    text-decoration: none!important;
+}
+li
+{
+    list-style: none;
+}
+header
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 50px;
+    background: #333;
+}
+header a
+{
+    line-height: 50px;
+    color: #ddd!important;
+}
+header .cmsLogo
+{
+    font: normal 20px/50px arial;
+    margin: 0 0 0 20px;
+}
+header .cmsSignout
+{
+    position: absolute;
+    right: 20px;
+}
+.container
+{
+    width: 100%;
+}

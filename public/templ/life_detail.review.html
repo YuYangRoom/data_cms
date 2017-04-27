@@ -1,0 +1,33 @@
+<div class="life_detail_review">
+	<h2>基本信息</h2>
+	<ul>
+		<li><label for="" class="control-label">类型：</label><strong>{{#ifCond type '1'}}餐馆{{/ifCond}}{{#ifCond type '2'}}购物{{/ifCond}}{{#ifCond type '3'}}娱乐{{/ifCond}}</strong></li>
+		<li><label for="" class="control-label">是否显示类型：</label><strong>{{#if show_flag}}显示{{else}}不显示{{/if}}</strong></li>
+		<li><label for="" class="control-label">名称：</label><strong>{{name}}</strong></li>
+		<li><label for="" class="control-label">城市：</label><strong>{{city_name}}</strong></li>
+		<li><label for="" class="control-label">地址：</label><strong>{{address}}</strong></li>
+		<li><label for="" class="control-label">电话：</label><strong>{{tel}}</strong></li>
+		<li><label for="" class="control-label">网址：</label><strong>{{url}}</strong></li>
+		<li><label for="" class="control-label">价格描述：</label><strong>{{price_desc}}</strong></li>
+		<li><label for="" class="control-label">价格level：</label><strong>{{#ifCond price_level '1'}}超便宜{{/ifCond}}{{#ifCond price_level '1'}}超便宜{{/ifCond}}{{#ifCond price_level '1'}}超便宜{{/ifCond}}{{#ifCond price_level '1'}}超便宜{{/ifCond}}{{#ifCond price_level '1'}}超便宜{{/ifCond}}</strong></li>
+		<li><label for="" class="control-label">地理位置：</label><strong>{{latitude}}{{longitude}}</strong></li>
+		<li><label for="" class="control-label">描述：</label><strong>{{introduce}}</strong></li>
+		<li><label for="" class="control-label">评论：</label><strong>{{comments.[0]}}</strong></li>
+		<li><label for="" class="control-label">开放时间：</label><strong>{{open_time}}</strong></li>
+		<li><label for="" class="control-label">生活标签：</label><strong>{{lifetag}}</strong></li>
+		<li><label for="" class="control-label">服务设施：</label><strong>{{#if info.wifi}}免费wifi{{/if}}{{#if info.yu_ding}}可以预定{{/if}}{{#if info.delivery}}可以送餐{{/if}}{{#if info.take_out}}可以带走{{/if}}{{#if info.card}}卡支付{{/if}}{{#if info.g_f_kid}}适合孩子{{/if}}{{#if info.out_seat}}外面有座位{{/if}}{{#if info.tv}}有电视{{/if}}{{#if info.waiter}}有服务生{{/if}}</strong></li>
+		<li><label for="" class="control-label">适合什么：</label><strong>{{info.g_for}}</strong></li>
+		<li><label for="" class="control-label">噪音</label><strong>{{info.noise}}</strong></li>
+		<li><label for="" class="control-label">来源链接：</label><strong>{{info.alcohol}}</strong></li>
+	</ul>
+	<h2>排名相关信息</h2>
+	<ul>
+		<li><label for="" class="control-label">来源链接：</label><strong>{{url}}</strong></li>
+		<li><label for="" class="control-label">评星：</label><strong>{{rating}}</strong></li>
+		<li><label for="" class="control-label">评论数：</label><strong>{{reviews}}</strong></li>
+		<li><label for="" class="control-label">菜系：</label><strong>{{category}}</strong></li>
+		<li><label for="" class="control-label">推荐：</label><strong>{{#if info.recommand_flag}}推荐{{else}}不推荐{{/if}}</strong></li>
+		<li><label for="" class="control-label">当地特色：</label><strong>{{tese}}</strong></li>
+		<li><label for="" class="control-label">排名：</label><strong>{{ranking}}</strong></li>
+	</ul>
+</div>

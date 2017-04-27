@@ -1,0 +1,456 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}*/
+
+/*a {
+  color: #00B7FF;
+}*/
+.droperea{
+    top: 0;
+    left: 0;
+    background-position:center;
+    background-size:cover;
+    position: absolute;
+    margin:80px auto 90px;
+    min-height: 290px;
+    overflow: hidden;
+    width: 990px;
+    z-index: 100;
+    background-color:rgba(0,0,0,0.7) ;
+    box-shadow:0 0 4px rgba(0,0,0,0.3) inset,0 -3px 2px rgba(0,0,0,0.1);
+}
+.modal-body {
+    max-height: 100%;
+}
+#uploadedName {
+    display: inline-table;
+}
+
+#uploadedName li {
+    float: left;
+    margin: 5px;
+    width: 100px;
+    position: relative;
+}
+
+#uploadedName li img {
+    width: 100px;
+}
+
+#uploadedName .btn-remove {
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+#uploadedName .btn-removeOtigin {
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+#TempuploadedName {
+    display: inline-table;
+}
+
+#TempuploadedName li {
+    float: left;
+    margin: 5px;
+    width: 100%;
+    border:solid 1px yellowgreen;
+    position: relative;
+}
+
+#TempuploadedName li img {
+    width: 100px;
+}
+#TempuploadedName p {
+    top: 5px;
+}
+
+#TempuploadedName .btn-remove {
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+#TempuploadedName .btn-removeOrigin {
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+#TempuploadedName .btn-save {
+    background: green;
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+#TempuploadedName .txt-title {
+    width: 100px;
+    padding: 30px;
+}
+#TempuploadedName .txt-advice {
+    width: 100px;
+    padding: 30px;
+}
+#TempuploadedName .txt-desc {
+    width: 500px;
+
+    padding: 30px;
+}
+.show-nav{
+    display: none;
+}
+.login-body{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid bisque;
+    padding: 20px;
+    background: #f5f5f5;
+}
+.class_of_alert {
+    display: none;
+    text-align: center;
+}
+.alert .close{
+    right: -20px;
+}
+.form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+#tab-user{
+    display: none;
+}
+.ui-autocomplete {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/**
+    markdown css begin
+*/
+.wmd-panel
+{
+    margin-left: 0%;
+    margin-right: 25%;
+    width: 50%;
+    min-width: 500px;
+}
+
+.wmd-button-bar 
+{
+    width: 100%;
+    background-color: Silver; 
+}
+
+.wmd-input 
+{ 
+    height: 100px;
+    width: 100%;
+    background-color: Gainsboro;
+    border: 1px solid DarkGray;
+}
+
+.wmd-preview 
+{ 
+    background-color: #c0e0ff; 
+}
+
+.wmd-button-row 
+{
+    position: relative; 
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 0px;  
+    height: 20px;
+}
+
+.wmd-spacer
+{
+    width: 1px; 
+    height: 20px; 
+    margin-left: 14px;
+    
+    position: absolute;
+    background-color: Silver;
+    display: inline-block; 
+    list-style: none;
+}
+
+.wmd-button {
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.wmd-button > span {
+    background-image: url(../libs/pagedown/wmd-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.wmd-spacer1
+{
+    left: 50px;
+}
+.wmd-spacer2
+{
+    left: 175px;
+}
+.wmd-spacer3
+{
+    left: 300px;
+}
+
+.wmd-prompt-background
+{
+    background-color: Black;
+}
+
+.wmd-prompt-dialog
+{
+    border: 1px solid #999999;
+    background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog > div {
+    font-size: 0.8em;
+    font-family: arial, helvetica, sans-serif;
+}
+
+
+.wmd-prompt-dialog > form > input[type="text"] {
+    border: 1px solid #999999;
+    color: black;
+}
+
+.wmd-prompt-dialog > form > input[type="button"]{
+    border: 1px solid #888888;
+    font-family: trebuchet MS, helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+/*.container{
+    width:100%;
+}*/
+.hero-unit{
+    padding: 20px 10px;
+}
+
+
+/**
+    markdown css end
+*/
+
+.control-right-label{
+    margin-left: 10px;
+}
+
+.controls li{
+    float:left;
+    list-style: none;
+}
+.form-horizontal .show_flag{
+    width: auto;
+}
+.basicmsg,#Rank-msg{
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+legend{
+    background: #e5e5e5;
+}
+.basicmsg legend button{
+    margin: 5px 5px 0 0;
+}
+input[type=checkbox]{
+    float: left;
+    margin: 9px 0 0 0px;
+}
+.services ul{
+    overflow: hidden;
+    padding: 0 0 0 20px;
+}
+.services li{
+    float: left;
+    margin-right: 10px;
+    list-style: none;
+}
+.services li .control-label{
+    width: auto;
+}
+.textareawrapper{
+    display: none;
+}
+.editwords{
+    color: #333;
+    width: 55%;
+}
+pre.editwords{
+    border: none;
+}
+.form-horizontal .controlsitem{
+    width: 60%;
+    margin-left: 350px;
+}
+.ItemTitle,.delbutton{
+    float: left;
+}
+.intr-control{
+    margin-bottom: 10px;
+}
+.tip-control,.tra-control{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.countrytable{
+    float:left;
+    margin-left:20px;
+    width:200px;
+}
+.fuelux{
+    width: 80%;
+}
+.bs-callout-info {
+    background-color: #f4f8fa;
+    border-color: #bce8f1;
+}
+.bs-callout {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+.citypreview_model{
+    width: 60%;
+}
+.edithistory{
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 300px;
+}
+.edhis-cn{
+    border: 1px solid #ddd;
+    
+    padding: 15px;
+    background-color: #fff;
+}
+.edhis-cn dt {
+    float: none;
+    width: 100%;
+    background-color: #929292;
+    color:#fff;
+    text-align:center;
+    border-radius:5px;
+    padding:5px 0;
+}
+.edhis-cn dd {
+    margin:10px 0;
+}
+.edhis-cn dd span{
+    display:inline-block;
+    width:100px;
+}
+.edhis-cn dd textarea{
+    display:inline-block;
+    width:150px;
+    vertical-align:text-top;
+    resize: none;
+}
+.bs-example {
+}
+.highlight {
+}
+.countrytable td a{
+    float: left;
+    width: 200px;
+    height: 20px;
+}
+.model pre{
+    width: 60%;
+}
+.cityimages img{
+    width: 100px;
+}
+.citybgimages img{
+    width: 200px;
+}
+.dropzone{
+    min-height: 128px;
+}
+.tagsbtn{
+    float: left;
+    margin-right: 10px;
+}
+#auditorname{
+    width: 120px;
+}
